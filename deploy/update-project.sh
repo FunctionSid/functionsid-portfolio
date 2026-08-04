@@ -18,6 +18,7 @@ mkdir -p "${APP_DIR}/logs" "${APP_DIR}/releases" "${APP_DIR}/shared" "${WALLET_D
 cd "${APP_DIR}"
 git fetch origin main
 git reset --hard origin/main
+chmod +x "${APP_DIR}"/deploy/*.sh
 
 if [ -d "${WALLET_DIR}" ]; then
   export TNS_ADMIN="${WALLET_DIR}"
