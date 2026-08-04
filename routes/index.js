@@ -10,6 +10,7 @@ router.get('/', publicController.showHome);
 router.post('/auth/google', authController.googleLogin);
 router.post('/auth/logout', authController.logout);
 router.get('/about', publicController.showAbout);
+router.get('/journey', (req, res) => res.redirect(302, '/about#journey-title'));
 router.get('/services', publicController.showServices);
 router.get('/projects', publicController.showProjects);
 router.get('/projects/:slug', publicController.showProjectDetail);
