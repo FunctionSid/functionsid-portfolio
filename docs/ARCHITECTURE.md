@@ -118,6 +118,13 @@ Oracle Autonomous Database
 - Prohibited Replacements: do not use SQLite, PostgreSQL, MySQL, MongoDB, Firebase Firestore, or any other replacement database for FunctionSid.
 - SQL Placement: keep SQL in repository modules only.
 
+Wallet paths:
+
+| Environment | `.env` location | Wallet path |
+|---|---|---|
+| Windows Development | Project root `.env` | `D:\project\Oracle\Wallets\SIDCORE` |
+| Oracle Linux Production | `/opt/functionsid/.env` | `/opt/functionsid/wallet` |
+
 ### 5. Authentication Flow
 - **Client Side:** Firebase Auth SDK executes Google Sign-In on client browser.
 - **Token Exchange:** Client sends Firebase ID Token to server route `/auth/verify-token`.
