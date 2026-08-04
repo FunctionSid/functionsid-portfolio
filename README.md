@@ -89,6 +89,7 @@ Comprehensive documentation is maintained in the `docs/` directory:
 - [DATABASE.md](/docs/DATABASE.md) — Oracle Autonomous DB schemas and DDL.
 - [ADMIN_GUIDE.md](/docs/ADMIN_GUIDE.md) — Firebase administrator login, dashboard, CRUD modules, contact inbox, uploads, and API notes.
 - [DEPLOYMENT.md](/docs/DEPLOYMENT.md) — Step-by-step Oracle Linux PM2/Nginx deployment guide.
+- [PRODUCTION.md](/docs/PRODUCTION.md) — Live production operations, PM2, Nginx, HTTPS, GitHub Actions, and recovery.
 - [SECURITY.md](/docs/SECURITY.md) — Secrets management, Firebase ID token auth, rate limiting.
 - [CODING_STANDARDS.md](/docs/CODING_STANDARDS.md) — Node.js portability rules and SQL/Python guidelines.
 - [ROADMAP.md](/docs/ROADMAP.md) — Planned implementation phases.

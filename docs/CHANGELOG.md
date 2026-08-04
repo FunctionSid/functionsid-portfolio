@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [0.4.0] - 2026-08-04
+
+### Added
+- Added production deployment reload script for PM2-managed deployments.
+- Added live production operations guide in `docs/PRODUCTION.md`.
+- Added `/journey` redirect to the About page journey section.
+
+### Changed
+- Updated GitHub Actions to deploy to the VM and reload or start the `functionsid` PM2 process after checks pass.
+- Updated Nginx template for `functionsid.duckdns.org` with gzip and security headers.
+- Updated deployment documentation for HTTPS, Certbot, PM2 startup, and recovery operations.
+
+### Verified
+- Verified `https://functionsid.duckdns.org` with Let's Encrypt HTTPS.
+- Verified HTTP to HTTPS redirect.
+- Verified PM2 and Nginx automatic recovery after reboot.
+- Verified Oracle Wallet and Oracle database connectivity from Node.js on the VM.
+
+---
+
 ## [0.3.0] - 2026-08-04
 
 ### Added
