@@ -41,10 +41,10 @@ The portfolio website is constructed as a monolithic, server-side rendered Node.
 
 ## Project Structure
 
-The project follows a standard Express MVC-like structure, deployed on the Oracle Linux VM at `/home/opc/FunctionSid`.
+The project follows a standard Express MVC-like structure, prepared for Oracle Linux deployment at `/opt/functionsid`.
 
 ```text
-/home/opc/FunctionSid
+/opt/functionsid
 ├── public                 # Static assets (CSS, JS, images, fonts, PDF resume)
 ├── views                  # EJS templates and partials
 ├── routes                 # Express route definitions

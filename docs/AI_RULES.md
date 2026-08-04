@@ -23,7 +23,7 @@ This document contains permanent, non-negotiable instructions for every AI assis
 ## 3. Platform & Infrastructure Rules
 - **SINGLE ORACLE CLOUD VM:** Production runs ONLY on one Oracle Cloud VM (`VM.Standard.E2.1.Micro`, AMD EPYC, x86_64, 2 vCPUs, 1 GB RAM, 4 GB Swap, Oracle Linux 9.8).
 - **ARCHITECTURE:** One Git repository, one Node.js application, one PM2 process, one Nginx configuration, one Oracle VM, one Duck DNS domain. [Historical: Zero containers].
-- **DEPLOYMENT WORKFLOW:** Deployment is strictly `Windows 11 → Git → GitHub (FunctionSid/functionsid on main) → GitHub Actions → Oracle Linux VM → npm ci → PM2 restart functionsid → Nginx → https://functionsid.duckdns.org`.
+- **DEPLOYMENT WORKFLOW:** Deployment preparation is strictly `Windows 11 → Git → GitHub (FunctionSid/functionsid-portfolio on main) → GitHub Actions → Oracle Linux VM → /opt/functionsid → npm ci --omit=dev → infrastructure checks`. Do not start or reload PM2 until production `.env` and Oracle Wallet are present and verified.
 - **ONLY DATABASE:** Oracle Autonomous Database is the official and only database for FunctionSid in both Windows local development and Oracle Linux production. Do not replace it with SQLite, PostgreSQL, MySQL, MongoDB, Firebase Firestore, or any other database.
 - **DATABASE LAYERING:** All Oracle connections must originate from the centralized database module (`config/database.js`). Controllers must never contain SQL. Business logic belongs in services. SQL belongs only in repositories.
 - **PORTABLE NODE.JS CODE:** Always preserve cross-platform compatibility between Windows development (`http://localhost:3000`) and Oracle Linux deployment. Never use Windows-only APIs.

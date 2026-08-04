@@ -12,7 +12,7 @@ This document is the single source of truth for infrastructure, authentication, 
 
 ## 1. Project
 - **Project Name:** FunctionSid
-- **Repository:** functionsid
+- **Repository:** functionsid-portfolio
 - **Application Type:** Node.js Portfolio Website
 - **Current Status:** Development
 
@@ -31,9 +31,11 @@ The website showcases:
 
 ## 3. Local Development
 - **Operating System:** Windows 11
-- **Runtime:** Node.js 22 LTS
+- **Runtime:** Node.js 24
 - **Development URL:** `http://localhost:3000`
 - **Development Tools:** Visual Studio Code, PowerShell 7, Git, GitHub
+- **Oracle Wallet:** `D:\project\Oracle\Wallets\SIDCORE`
+- **Environment File:** Project root `.env`
 
 **Constraints:**
 - The same codebase must run on Windows and Oracle Linux.
@@ -45,6 +47,9 @@ The website showcases:
 - **Operating System:** Oracle Linux Server 9.8
 - **Instance:** siddharth-amd-vm
 - **Architecture:** AMD EPYC x86_64
+- **Application Directory:** `/opt/functionsid`
+- **Oracle Wallet:** `/opt/functionsid/wallet`
+- **Environment File:** `/opt/functionsid/.env`
 - **Reverse Proxy:** Nginx
 - **Process Manager:** PM2
 - **Deployment:** GitHub Actions
@@ -67,13 +72,15 @@ GitHub Actions
    ↓
 Oracle Linux VM
    ↓
-npm ci
+/opt/functionsid
    ↓
-PM2 restart
+npm ci --omit=dev
+   ↓
+Infrastructure checks
    ↓
 Nginx
    ↓
-https://functionsid.duckdns.org
+future DNS/HTTPS
 ```
 
 ## 7. Firebase Integration
@@ -153,7 +160,7 @@ Features may include:
 - **Temporary Storage:** Automatically remove temporary files older than 7 days. Permanent files are never deleted automatically.
 
 ## 13. Project Structure
-- **Production Folder:** `/home/opc/FunctionSid`
+- **Production Folder:** `/opt/functionsid`
 
 **Important Folders:**
 - `public`

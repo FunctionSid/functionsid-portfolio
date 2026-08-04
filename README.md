@@ -1,6 +1,6 @@
 # Siddharth Kalantri — Personal Portfolio Website
 
-A production-quality, accessible, and lightweight personal portfolio website built with Node.js 22, Express, EJS, Bootstrap 5, and Oracle Autonomous Database.
+A production-quality, accessible, and lightweight personal portfolio website built with Node.js 24, Express, EJS, Bootstrap 5, and Oracle Autonomous Database.
 
 ---
 
@@ -12,15 +12,16 @@ A production-quality, accessible, and lightweight personal portfolio website bui
 - **CPU:** AMD EPYC (x86_64 architecture, 2 vCPUs)
 - **RAM:** 1 GB RAM + 4 GB swapfile
 - **Operating System:** Oracle Linux 9.8 (Package Manager: DNF)
-- **Runtime:** Node.js 22 LTS
+- **Runtime:** Node.js 24
 - **Process Manager:** PM2 (`--max-memory-restart 200M`)
 - **Reverse Proxy:** Nginx (listening on 80/443, proxying to `localhost:3000`)
-- **HTTPS:** Let's Encrypt + Certbot
+- **HTTPS:** Planned with Let's Encrypt + Certbot after the Oracle VM, DNS, production `.env`, and Oracle Wallet are ready.
 - **Architecture:** Monolithic, server-side rendered.
 
 ### Development Environment
 - **Development OS:** Windows 11
 - **Local URL:** `http://localhost:3000`
+- **Windows Oracle Wallet:** `D:\project\Oracle\Wallets\SIDCORE`
 - **Path Standard:** All file paths use portable forward slashes (`/`).
 - **Compatibility:** The same codebase must work seamlessly on Windows 11 (development) and Oracle Linux (production) using cross-platform Node.js APIs.
 
@@ -37,9 +38,18 @@ A production-quality, accessible, and lightweight personal portfolio website bui
 - **Note:** Application code must not depend on the domain name.
 
 ### Deployment Workflow
-GitHub Actions is the single source of deployment. Deployment is executed as:
+GitHub Actions is the single source of deployment preparation. The current workflow tests the project, prepares `/opt/functionsid` on the Oracle Linux VM, installs production dependencies, and verifies Node.js, PM2, and Nginx. It does not start or reload the application until the production `.env` and Oracle Wallet are copied to the VM.
+
+Environment-specific Oracle Wallet configuration:
+
+| Environment | `.env` location | Wallet path |
+|---|---|---|
+| Windows development | Project root `.env` | `D:\project\Oracle\Wallets\SIDCORE` |
+| Oracle Linux production | `/opt/functionsid/.env` | `/opt/functionsid/wallet` |
+
+Planned full deployment path:
 ```
-Windows 11 → Git → GitHub (FunctionSid/functionsid on main) → GitHub Actions → Oracle Linux VM → npm ci → PM2 restart functionsid → Nginx → https://functionsid.duckdns.org
+Windows 11 → Git → GitHub (FunctionSid/functionsid-portfolio on main) → GitHub Actions → Oracle Linux VM → /opt/functionsid → npm ci --omit=dev → future PM2 start/restart → Nginx → DNS/HTTPS
 ```
 
 ---

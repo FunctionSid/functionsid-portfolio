@@ -17,17 +17,20 @@ This document specifies the hardware, operating system, and runtime environment 
 - **Swap Memory:** 4 GB swapfile (`/swapfile`, `vm.swappiness=80`, `vm.vfs_cache_pressure=50`)
 - **Operating System:** Oracle Linux 9.8
 - **Package Manager:** DNF
+- **Application Directory:** `/opt/functionsid`
+- **Production Environment File:** `/opt/functionsid/.env`
+- **Production Oracle Wallet:** `/opt/functionsid/wallet`
 
 ---
 
 ## Installed Software Stack
 
 - **Version Control:** Git
-- **Runtime Environment:** Node.js 22 LTS
+- **Runtime Environment:** Node.js 24
 - **Package Manager:** npm (latest)
 - **Process Manager:** PM2 (`--max-memory-restart 200M`)
 - **Web Server / Reverse Proxy:** Nginx
-- **SSL / TLS Certificate Automation:** Certbot (`python3-certbot-nginx`)
+- **SSL / TLS Certificate Automation:** Planned later with Certbot (`python3-certbot-nginx`)
 - **Database:** Oracle Autonomous Database (mTLS wallet authentication)
 
 ---
@@ -39,7 +42,7 @@ Windows 11
        ↓
 Git
        ↓
-GitHub (FunctionSid/functionsid on main)
+GitHub (FunctionSid/functionsid-portfolio on main)
        ↓
 GitHub Actions
        ↓
@@ -74,9 +77,11 @@ Oracle Autonomous Database (SIDCORE)
 | **Operating System** | Windows 11 Pro 64-bit | Oracle Linux 9.8 |
 | **Processor Arch** | x86_64 (AMD Ryzen 7 8700G) | x86_64 (AMD EPYC) |
 | **Memory** | 32 GB RAM | 1 GB RAM (+ 4 GB Swap) |
-| **Node.js** | v22.17.0 | Node.js 22 LTS |
+| **Node.js** | Node.js 24.x | Node.js 24 |
 | **Package Manager** | npm / bun | npm / DNF |
 | **Path Separators** | Standardized to `/` | Standardized to `/` |
+| **Environment File** | Project root `.env` | `/opt/functionsid/.env` |
+| **Oracle Wallet** | `D:\project\Oracle\Wallets\SIDCORE` | `/opt/functionsid/wallet` |
 
 ---
 

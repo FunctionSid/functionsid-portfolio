@@ -1,7 +1,7 @@
 # Outstanding Tasks & TODO List
 
 ## Immediate Tasks (Phase 1 Foundation)
-- [x] Initialize `package.json` with Node.js 22 production dependencies.
+- [x] Initialize `package.json` with Node.js 24 production dependencies.
 - [x] Implement `config/database.js` Oracle Autonomous Database connection pool (`SIDCORE_HIGH`).
 - [x] Create repository modules so all SQL lives outside routes, controllers, and services.
 - [x] Create `scripts/init-db.js` to create database tables (`PROJECTS`, `COMMENTS`, `CERTIFICATIONS`, `SKILLS`, `BLOG_POSTS`, `CONTACT_MESSAGES`, `SESSIONS`).
@@ -15,14 +15,14 @@
 - [x] Build view templates for Home, About, Services, Projects, individual project pages, Skills, Certifications, Resume, Accessibility Statement, Privacy Policy, 404, and Contact pages.
 
 ## Auth & Moderation (Phase 3)
-- [ ] Set up Firebase Auth client-side script and Express `/auth/verify-token` route.
+- [x] Set up Firebase Auth client-side script and Express Google auth routes.
 - [ ] Build moderated comment submission and pending queue.
 - [ ] Build protected Admin dashboard and contact inbox view.
 
 ## Verification & Deployment (Phase 3)
 - [ ] Conduct accessibility audit using NVDA and JAWS screen readers.
 - [ ] Test keyboard navigation across all interactive components.
-- [ ] Configure PM2 `ecosystem.config.js` and Nginx reverse proxy configuration.
+- [x] Prepare PM2 `ecosystem.config.js`, GitHub Actions, VM scripts, and disabled Nginx reverse proxy template.
 
 ## Missing Information / Open Items (TODO)
 - [ ] **Domain Name:** Register domain name for final HTTPS / Let's Encrypt certificate setup.

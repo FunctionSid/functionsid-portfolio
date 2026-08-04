@@ -4,6 +4,10 @@
 node_modules/
 logs/
 storage/tmp/
+releases/
+shared/wallet/
+wallet/
+oracle-wallet/
 public/uploads/*
 *.log
 *.sso

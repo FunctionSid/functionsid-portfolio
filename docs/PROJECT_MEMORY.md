@@ -23,14 +23,14 @@ Build a production-quality personal portfolio website that is:
 - **Assistive Tech:** 20+ years screen reader power-user (NVDA, JAWS)
 
 ## Primary Technologies
-- **Backend:** Node.js 22 LTS, Express
+- **Backend:** Node.js 24, Express
 - **Templating:** EJS (`partials/header.ejs`, `partials/footer.ejs`)
 - **Frontend:** Bootstrap 5 (custom trimmed + dark mode), Vanilla JavaScript, semantic HTML
 - **Database:** Oracle Autonomous Database (`SIDCORE` 19c OLTP Always Free, thin driver)
 - **Authentication:** Firebase Auth (Google Sign-In) + `firebase-admin` server-side token verification
 - **Process Manager:** PM2 (`--max-memory-restart 200M`)
 - **Reverse Proxy:** Nginx
-- **HTTPS:** Certbot / Let's Encrypt
+- **HTTPS:** Planned with Certbot / Let's Encrypt after VM, DNS, production `.env`, and Oracle Wallet readiness.
 - **Email Notifications:** Nodemailer (SMTP for contact forms)
 - **Middleware & Utilities:** `helmet`, `express-rate-limit`, `compression`, `morgan`, `winston`, `dotenv`
 
@@ -85,7 +85,7 @@ Build a production-quality personal portfolio website that is:
 
 ### Deployment Decisions
 - Production runs ONLY on one Oracle Cloud VM (`VM.Standard.E2.1.Micro`, AMD EPYC, x86_64, 2 vCPUs, 1 GB RAM, 4 GB Swap, Oracle Linux 9.8).
-- Deployment pipeline: `Windows 11 → Git → GitHub (FunctionSid/functionsid on main) → GitHub Actions → Oracle Linux VM → npm ci → PM2 restart functionsid → Nginx → https://functionsid.duckdns.org`
+- Deployment preparation pipeline: `Windows 11 → Git → GitHub (FunctionSid/functionsid-portfolio on main) → GitHub Actions → Oracle Linux VM → /opt/functionsid → npm ci --omit=dev → infrastructure checks`. PM2 start/reload is deferred until production `.env` and Oracle Wallet are present and verified.
 - Architecture: Monolithic Node.js native. [Historical Note: Container technologies (Docker, Podman, Kubernetes) were permanently rejected in favor of PM2 for memory efficiency].
 - Memory protection: PM2 restart ceiling set to `200M`.
 

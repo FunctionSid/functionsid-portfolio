@@ -8,8 +8,11 @@ This document mirrors the authoritative production environment for the FunctionS
 
 - **Project Name:** FunctionSid
 - **Purpose:** Personal portfolio website for Siddharth Kalantri.
-- **Production Application Directory:** `/home/opc/FunctionSid`
+- **Production Application Directory:** `/opt/functionsid`
 - **Development Root:** `D:/project/siddharthkalantri/FunctionSid`
+- **Windows Development Wallet:** `D:\project\Oracle\Wallets\SIDCORE`
+- **Oracle Linux Production Wallet:** `/opt/functionsid/wallet`
+- **Production Environment File:** `/opt/functionsid/.env`
 
 ---
 
@@ -29,11 +32,11 @@ This document mirrors the authoritative production environment for the FunctionS
 ## Installed Software
 
 - Git
-- Node.js 22 LTS
+- Node.js 24
 - npm
 - PM2
 - Nginx
-- Certbot
+- Certbot (planned later)
 - `python3-certbot-nginx`
 - DNF package manager
 
@@ -59,7 +62,7 @@ Nginx
 functionsid.duckdns.org
 ```
 
-GitHub Actions deploys into `/home/opc/FunctionSid` and restarts the official PM2 process named `functionsid`.
+GitHub Actions prepares `/opt/functionsid`, installs production dependencies, and verifies infrastructure. It does not start or reload the official PM2 process named `functionsid` until production `.env` and Oracle Wallet are ready.
 
 ---
 
@@ -78,6 +81,8 @@ Nginx proxies public HTTP/HTTPS traffic to the Node.js application on `127.0.0.1
 - **Runtime Schema:** `FUNCTIONSID`
 - **Administrative User:** `ADMIN` only for initial schema setup
 - **Development and Production:** Both Windows local development and Oracle Linux production use Oracle Autonomous Database through environment configuration.
+- **Windows `.env`:** Uses `TNS_ADMIN=D:\project\Oracle\Wallets\SIDCORE` and `DB_WALLET_DIR=D:\project\Oracle\Wallets\SIDCORE`.
+- **Production `.env`:** Uses `TNS_ADMIN=/opt/functionsid/wallet` and `DB_WALLET_DIR=/opt/functionsid/wallet`.
 
 Do not use SQLite, PostgreSQL, MySQL, MongoDB, Firebase Firestore, or any other replacement database architecture for FunctionSid.
 
@@ -117,6 +122,6 @@ Disabled or unused Firebase services:
 ## Notes for AI
 
 - Keep the architecture lightweight for the low-memory OCI VM.
-- Use Node.js 22, Express, EJS, PM2, Nginx, Oracle Autonomous Database, and Firebase Authentication only as documented.
+- Use Node.js 24, Express, EJS, PM2, Nginx, Oracle Autonomous Database, and Firebase Authentication only as documented.
 - Do not introduce containers or replacement databases.
 - Do not begin implementation phases without user approval.

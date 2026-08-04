@@ -77,7 +77,7 @@ DB_APP_SCHEMA=FUNCTIONSID
 
 Remove `DB_ADMIN_USER` and `DB_ADMIN_PASSWORD` from the normal runtime `.env` after initialization. Do not commit `.env`, Oracle wallet files, passwords, or credentials.
 
-For local Windows development, the verified wallet directory is `D:/project/Oracle/Wallets/SIDCORE`. For Oracle Linux production, use the same copied wallet at `/home/opc/oracle-wallet` and change only `DB_WALLET_DIR` and `TNS_ADMIN` to that production path. Keep `DB_WALLET_PASSWORD` configured as an environment secret; node-oracledb Thin mode requires it to decrypt the wallet PEM file.
+For local Windows development, the verified wallet directory is `D:\project\Oracle\Wallets\SIDCORE`. For Oracle Linux production, use the same copied wallet at `/opt/functionsid/wallet` and change only `DB_WALLET_DIR` and `TNS_ADMIN` to that production path. Keep `DB_WALLET_PASSWORD` configured as an environment secret; node-oracledb Thin mode requires it to decrypt the wallet PEM file.
 
 ---
 

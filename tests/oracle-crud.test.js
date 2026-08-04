@@ -4,7 +4,7 @@ require('dotenv').config({ override: true });
 const { initDb, closePool } = require('../config/database');
 const contentRepository = require('../repositories/content-repository');
 
-test('Oracle content repository supports CRUD', async () => {
+test('Oracle content repository supports CRUD', { skip: process.env.SKIP_ORACLE_CRUD_TEST === 'true' }, async () => {
   await initDb();
   let createdId;
 

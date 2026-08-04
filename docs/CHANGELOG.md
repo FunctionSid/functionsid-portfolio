@@ -6,6 +6,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [0.3.0] - 2026-08-04
+
+### Added
+- Added GitHub Actions deployment-preparation workflow with `push` to `main` and manual `workflow_dispatch` triggers.
+- Added VM deployment scripts under `deploy/` for installing prerequisites, updating the project, checking system, Node.js, Nginx, PM2, and preparing rollback files.
+- Added disabled Nginx configuration template at `deploy/nginx/functionsid.conf.template`.
+- Added `docs/GITHUB_ACTIONS.md` and `docs/VM_SETUP.md`.
+- Added `docs/GITHUB_SETUP.md` to record verified GitHub repository configuration, ignore rules, uploaded file categories, and next GitHub tasks.
+
+### Changed
+- Updated deployment target path from `/home/opc/FunctionSid` to `/opt/functionsid`.
+- Updated deployment runtime documentation and `package.json` engine requirement to Node.js 24.
+- Updated `.env.example` production wallet placeholders to `/opt/functionsid/wallet`.
+- Updated deployment documentation to clarify that PM2, Nginx reloads, HTTPS, and application startup are deferred until production `.env` and Oracle Wallet are copied to the VM.
+- Updated GitHub Actions secret names to `VM_HOST`, `VM_PORT`, `VM_USER`, and `VM_SSH_KEY`.
+
+### Verified
+- Deployment scripts were checked with Bash syntax validation.
+- GitHub Actions workflow was parsed as valid YAML.
+- `npm test` passed locally.
+- No application, PM2 process, Nginx reload, or system service restart was started during deployment preparation.
+
+---
+
 ## [0.2.0] - 2026-08-03
 
 ### Added
