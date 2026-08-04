@@ -1,0 +1,47 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="uploads-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('admin.files') %></p>
+    <h1 id="uploads-title"><%= tt('admin.uploadAssets') %></h1>
+    <p class="lead-text"><%= tt('admin.uploadLead') %></p>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="container">
+    <% if (error) { %><div class="form-alert error" role="alert"><%= error %></div><% } %>
+    <form class="form-card" method="POST" action="/admin/uploads?_csrf=<%= csrfToken %>" enctype="multipart/form-data">
+      <div class="form-field">
+        <label for="uploadType"><%= tt('admin.uploadType') %></label>
+        <select id="uploadType" name="uploadType" required>
+          <% uploadTypes.forEach((type) => { %><option value="<%= type %>"><%= type %></option><% }) %>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="asset"><%= tt('admin.file') %></label>
+        <input id="asset" name="asset" type="file" required>
+      </div>
+      <button class="btn-primary-custom" type="submit"><%= tt('admin.uploadFile') %></button>
+    </form>
+
+    <div class="table-responsive">
+      <table class="table table-dark table-striped align-middle">
+        <caption><%= tt('admin.uploadedFiles') %></caption>
+        <thead><tr><th><%= tt('admin.type') %></th><th><%= tt('admin.name') %></th><th><%= tt('admin.path') %></th><th><%= tt('admin.size') %></th></tr></thead>
+        <tbody>
+          <% uploads.forEach((upload) => { %>
+            <tr>
+              <td><%= upload.uploadType %></td>
+              <td><%= upload.originalName %></td>
+              <td><code><%= upload.publicPath %></code></td>
+              <td><%= upload.fileSize %> <%= tt('admin.bytes') %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

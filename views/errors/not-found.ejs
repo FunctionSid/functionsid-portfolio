@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<section class="page-hero" aria-labelledby="not-found-title">
+  <div class="container narrow-container">
+    <p class="eyebrow">404</p>
+    <h1 id="not-found-title"><%= tt('pages.errors.notFoundTitle') %></h1>
+    <p class="lead-text"><%= tt('pages.errors.notFoundText') %></p>
+    <a href="/?lang=<%= language %>" class="btn-primary-custom">
+      <i data-lucide="arrow-left" aria-hidden="true"></i>
+      <span><%= tt('common.backHome') %></span>
+    </a>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

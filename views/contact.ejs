@@ -1,0 +1,87 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="contact-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('pages.contact.eyebrow') %></p>
+    <h1 id="contact-title"><%= tt('pages.contact.heading') %></h1>
+    <p class="lead-text"><%= tt('pages.contact.lead') %></p>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="contact-options-title">
+  <div class="container contact-grid">
+    <div>
+      <h2 id="contact-options-title"><%= tt('pages.contact.informationTitle') %></h2>
+      <div class="contact-list">
+        <article>
+          <i data-lucide="mail" aria-hidden="true"></i>
+          <div>
+            <h3><%= tt('pages.contact.email') %></h3>
+            <a href="mailto:<%= profile.publicEmail %>"><%= profile.publicEmail %></a>
+          </div>
+        </article>
+        <article>
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <h3><%= tt('pages.contact.location') %></h3>
+            <p><%= profile.location %></p>
+          </div>
+        </article>
+        <article class="contact-note-card">
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+          <div>
+            <h3><%= tt('pages.contact.quickTitle') %></h3>
+            <p><%= tt('pages.contact.quickText') %></p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h2><%= tt('pages.contact.formTitle') %></h2>
+      <p class="form-note"><%= tt('pages.contact.formNote') %></p>
+      <% if (typeof contactSuccess !== 'undefined') { %>
+        <div class="form-alert success" aria-live="polite" role="status"><%= contactSuccess %></div>
+      <% } %>
+      <% if (typeof contactErrors !== 'undefined' && contactErrors.length) { %>
+        <div class="form-alert error" role="alert">
+          <p><%= tt('common.pleaseCorrect') %></p>
+          <ul><% contactErrors.forEach((error) => { %><li><%= error %></li><% }) %></ul>
+        </div>
+      <% } %>
+      <form id="contactForm" action="/contact" method="POST" novalidate data-validation-required="<%= tt('pages.contact.validationRequired') %>">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <div id="formAlert" aria-live="polite" class="form-alert" role="status"></div>
+
+        <div class="form-field">
+          <label for="fullName"><%= tt('pages.contact.fullName') %> <span aria-hidden="true">*</span></label>
+          <input type="text" id="fullName" name="fullName" required aria-required="true" aria-describedby="nameHelp" value="<%= typeof formData !== 'undefined' ? formData.fullName || '' : '' %>">
+          <p id="nameHelp"><%= tt('pages.contact.nameHelp') %></p>
+        </div>
+
+        <div class="form-field">
+          <label for="email"><%= tt('pages.contact.emailAddress') %> <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required aria-required="true" aria-describedby="emailHelp" value="<%= typeof formData !== 'undefined' ? formData.email || '' : '' %>">
+          <p id="emailHelp"><%= tt('pages.contact.emailHelp') %></p>
+        </div>
+
+        <div class="form-field">
+          <label for="subject"><%= tt('pages.contact.subject') %> <span aria-hidden="true">*</span></label>
+          <input type="text" id="subject" name="subject" required aria-required="true" value="<%= typeof formData !== 'undefined' ? formData.subject || '' : '' %>">
+        </div>
+
+        <div class="form-field">
+          <label for="message"><%= tt('pages.contact.message') %> <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="6" required aria-required="true"><%= typeof formData !== 'undefined' ? formData.message || '' : '' %></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary-custom">
+          <i data-lucide="send" aria-hidden="true"></i>
+          <span><%= tt('pages.contact.send') %></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

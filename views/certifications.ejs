@@ -1,0 +1,47 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="certifications-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('pages.certifications.eyebrow') %></p>
+    <h1 id="certifications-title"><%= tt('pages.certifications.heading') %></h1>
+    <p class="lead-text"><%= tt('pages.certifications.lead') %></p>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="certification-tabs-title">
+  <div class="container">
+    <h2 id="certification-tabs-title" class="visually-hidden"><%= tt('pages.certifications.categoriesSr') %></h2>
+    <div class="tabs-card">
+      <div role="tablist" aria-label="<%= tt('pages.certifications.categoriesAria') %>" class="cert-tablist">
+        <% Object.keys(certificationGroups).forEach((category, index) => { const id = category.toLowerCase().replace(/[^a-z0-9]+/g, '-'); %>
+          <button role="tab" type="button" id="tab-<%= id %>" class="cert-tab <%= index === 0 ? 'active' : '' %>" aria-selected="<%= index === 0 ? 'true' : 'false' %>" aria-controls="panel-<%= id %>" <%= index === 0 ? '' : 'tabindex="-1"' %>><%= category %></button>
+        <% }) %>
+      </div>
+
+      <% Object.entries(certificationGroups).forEach(([category, items], index) => { const id = category.toLowerCase().replace(/[^a-z0-9]+/g, '-'); %>
+        <section role="tabpanel" id="panel-<%= id %>" class="cert-panel <%= index === 0 ? '' : 'd-none' %>" aria-labelledby="tab-<%= id %>" tabindex="0">
+          <div class="cert-grid">
+            <% items.forEach((certification) => { %>
+              <article class="cert-card">
+                <h3><%= certification.title %></h3>
+                <dl>
+                  <div><dt><%= tt('pages.certifications.issuer') %></dt><dd><%= certification.issuer %></dd></div>
+                  <div><dt><%= tt('pages.certifications.date') %></dt><dd><%= certification.date %></dd></div>
+                  <div><dt><%= tt('pages.certifications.credentialId') %></dt><dd><%= certification.credentialId %></dd></div>
+                </dl>
+                <p class="small-label"><%= tt('pages.certifications.skillsGained') %></p>
+                <div class="badge-row">
+                  <% certification.skills.forEach((skill) => { %>
+                    <span class="badge-custom"><%= skill %></span>
+                  <% }) %>
+                </div>
+              </article>
+            <% }) %>
+          </div>
+        </section>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="resume-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('pages.resume.eyebrow') %></p>
+    <h1 id="resume-title"><%= tt('pages.resume.heading') %></h1>
+    <p class="lead-text"><%= tt('pages.resume.lead') %></p>
+    <div class="hero-actions">
+      <a href="/Siddharth_Kalantri_Resume.pdf" class="btn-primary-custom" download>
+        <i data-lucide="download" aria-hidden="true"></i>
+        <span><%= tt('pages.resume.download') %></span>
+      </a>
+      <button type="button" class="btn-secondary-custom" data-print-page>
+        <i data-lucide="printer" aria-hidden="true"></i>
+        <span><%= tt('pages.resume.print') %></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell resume-sheet" aria-label="<%= tt('pages.resume.contentAria') %>">
+  <div class="container narrow-container">
+    <section aria-labelledby="resume-summary-title">
+      <h2 id="resume-summary-title"><%= tt('pages.resume.summaryTitle') %></h2>
+      <p><%= profile.summary %> <%= tt('pages.resume.summarySuffix') %></p>
+    </section>
+
+    <section aria-labelledby="resume-experience-title">
+      <h2 id="resume-experience-title"><%= tt('pages.resume.experienceTitle') %></h2>
+      <ul>
+        <% projects.forEach((project) => { %>
+          <li><strong><%= project.title %>:</strong> <%= project.summary %></li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <section aria-labelledby="resume-education-title">
+      <h2 id="resume-education-title"><%= tt('pages.resume.educationTitle') %></h2>
+      <p><%= tt('pages.resume.educationText') %></p>
+    </section>
+
+    <section aria-labelledby="resume-certifications-title">
+      <h2 id="resume-certifications-title"><%= tt('pages.resume.certificationsTitle') %></h2>
+      <ul>
+        <% certifications.forEach((certification) => { %>
+          <li><%= certification.title %>, <%= certification.issuer %> (<%= certification.credentialId %>)</li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <section aria-labelledby="resume-skills-title">
+      <h2 id="resume-skills-title"><%= tt('pages.resume.skillsTitle') %></h2>
+      <% skills.slice(0, 6).forEach((group) => { %>
+        <h3><%= group.title %></h3>
+        <p><%= group.items.join(', ') %></p>
+      <% }) %>
+    </section>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

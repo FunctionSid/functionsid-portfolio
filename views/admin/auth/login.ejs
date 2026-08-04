@@ -1,0 +1,44 @@
+<%- include('../partials/header') %>
+
+<section class="page-hero" aria-labelledby="admin-login-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('pages.adminLogin.eyebrow') %></p>
+    <h1 id="admin-login-title"><%= tt('pages.adminLogin.heading') %></h1>
+    <p class="lead-text"><%= tt('pages.adminLogin.lead', { email: adminEmail }) %></p>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="container narrow-container">
+    <% if (error) { %>
+      <div class="form-alert error" role="alert"><%= error %></div>
+    <% } %>
+    <div class="form-card">
+      <form id="firebaseAdminLogin" action="/admin/login" method="POST"
+        data-firebase-api-key="<%= firebaseConfig.apiKey %>"
+        data-firebase-auth-domain="<%= firebaseConfig.authDomain %>"
+        data-firebase-project-id="<%= firebaseConfig.projectId %>"
+        data-firebase-storage-bucket="<%= firebaseConfig.storageBucket %>"
+        data-firebase-messaging-sender-id="<%= firebaseConfig.messagingSenderId %>"
+        data-firebase-app-id="<%= firebaseConfig.appId %>">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <input type="hidden" id="idToken" name="idToken">
+        <div class="form-field">
+          <label>
+            <input type="checkbox" name="remember">
+            <%= tt('pages.adminLogin.remember') %>
+          </label>
+        </div>
+        <button id="googleLoginButton" type="button" class="btn-primary-custom">
+          <i data-lucide="log-in" aria-hidden="true"></i>
+          <span><%= tt('pages.adminLogin.continue') %></span>
+        </button>
+        <p class="form-note" id="loginStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="/js/admin-login.js"></script>
+
+<%- include('../partials/footer') %>

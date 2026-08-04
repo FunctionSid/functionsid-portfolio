@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+
+<section class="page-hero" aria-labelledby="messages-title">
+  <div class="container">
+    <p class="eyebrow"><%= tt('admin.inbox') %></p>
+    <h1 id="messages-title"><%= tt('admin.contactMessages') %></h1>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="container">
+    <form class="toolbar-form" method="GET" action="/admin/messages">
+      <label for="search"><%= tt('admin.search') %></label>
+      <input id="search" name="search" type="search" value="<%= query.search || '' %>">
+      <label for="status"><%= tt('admin.status') %></label>
+      <select id="status" name="status">
+        <% ['all', 'unread', 'read', 'archived'].forEach((status) => { %>
+          <option value="<%= status %>" <%= (query.status || 'all') === status ? 'selected' : '' %>><%= tt(`admin.options.${status}`) %></option>
+        <% }) %>
+      </select>
+      <button class="btn-secondary-custom" type="submit"><%= tt('admin.apply') %></button>
+    </form>
+    <div class="table-responsive">
+      <table class="table table-dark table-striped align-middle">
+        <caption><%= tt('admin.messageInbox') %></caption>
+        <thead><tr><th><%= tt('admin.from') %></th><th><%= tt('admin.subject') %></th><th><%= tt('admin.status') %></th><th><%= tt('admin.received') %></th><th><%= tt('admin.action') %></th></tr></thead>
+        <tbody>
+          <% items.forEach((message) => { %>
+            <tr>
+              <td><%= message.fullName %><br><a href="mailto:<%= message.email %>"><%= message.email %></a></td>
+              <td><%= message.subject %></td>
+              <td><%= tt(`admin.options.${message.status}`, { defaultValue: message.status }) %></td>
+              <td><%= message.createdAt %></td>
+              <td><a href="/admin/messages/<%= message.id %>"><%= tt('admin.view') %></a></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

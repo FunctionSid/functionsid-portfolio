@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="accessibility-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('pages.accessibility.eyebrow') %></p>
+    <h1 id="accessibility-title"><%= tt('pages.accessibility.heading') %></h1>
+    <p class="lead-text"><%= tt('pages.accessibility.lead') %></p>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="commitment-title">
+  <div class="container narrow-container">
+    <h2 id="commitment-title"><%= tt('pages.accessibility.commitmentTitle') %></h2>
+    <p><%= tt('pages.accessibility.commitmentText') %></p>
+
+    <h2><%= tt('pages.accessibility.practicesTitle') %></h2>
+    <ul>
+      <% t('ui.pages.accessibility.practices', { returnObjects: true }).forEach((practice) => { %>
+        <li><%= practice %></li>
+      <% }) %>
+    </ul>
+
+    <h2><%= tt('pages.accessibility.testingTitle') %></h2>
+    <p><%= tt('pages.accessibility.testingText') %></p>
+
+    <h2><%= tt('pages.accessibility.feedbackTitle') %></h2>
+    <p><%= tt('pages.accessibility.feedbackText') %> <a href="mailto:<%= profile.publicEmail %>"><%= profile.publicEmail %></a>.</p>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

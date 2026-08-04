@@ -1,0 +1,86 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="about-title">
+  <div class="container page-hero-grid">
+    <div>
+      <p class="eyebrow"><%= tt('pages.about.eyebrow') %></p>
+      <h1 id="about-title"><%= tt('pages.about.heading') %></h1>
+      <p class="lead-text"><%= tt('pages.about.lead') %></p>
+    </div>
+    <figure class="portrait-frame">
+      <img src="/images/siddharth-image-for site.jpg" alt="<%= tt('pages.about.portraitAlt') %>" width="680" height="800">
+      <figcaption><%= tt('pages.about.portraitCaption') %></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="journey-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('pages.about.journeyEyebrow') %></p>
+    <h2 id="journey-title"><%= tt('pages.about.journeyTitle') %></h2>
+    <% t('ui.pages.about.journey', { returnObjects: true }).forEach((paragraph) => { %>
+      <p><%= paragraph %></p>
+    <% }) %>
+  </div>
+</section>
+
+<section class="section-shell section-muted" aria-labelledby="education-title">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow"><%= tt('pages.about.educationEyebrow') %></p>
+      <h2 id="education-title"><%= tt('pages.about.educationTitle') %></h2>
+    </div>
+    <div class="feature-grid two-col">
+      <article class="feature-card">
+        <i data-lucide="graduation-cap" aria-hidden="true"></i>
+        <h3><%= tt('pages.about.cards.0.title') %></h3>
+        <p><%= tt('pages.about.cards.0.text') %></p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="accessibility" aria-hidden="true"></i>
+        <h3><%= tt('pages.about.cards.1.title') %></h3>
+        <p><%= tt('pages.about.cards.1.text') %></p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="book-open-check" aria-hidden="true"></i>
+        <h3><%= tt('pages.about.cards.2.title') %></h3>
+        <p><%= tt('pages.about.cards.2.text') %></p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="target" aria-hidden="true"></i>
+        <h3><%= tt('pages.about.cards.3.title') %></h3>
+        <p><%= tt('pages.about.cards.3.text') %></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="about-timeline-title">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow"><%= tt('pages.about.timelineEyebrow') %></p>
+      <h2 id="about-timeline-title"><%= tt('pages.about.timelineTitle') %></h2>
+    </div>
+    <ol class="timeline-list">
+      <% timeline.forEach((item) => { %>
+        <li>
+          <span><%= item.period %></span>
+          <h3><%= item.title %></h3>
+          <p><%= item.description %></p>
+        </li>
+      <% }) %>
+    </ol>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="about-next-title">
+  <div class="container cta-inner">
+    <div>
+      <h2 id="about-next-title"><%= tt('pages.about.nextTitle') %></h2>
+      <p><%= tt('pages.about.nextText') %></p>
+    </div>
+    <a href="/projects?lang=<%= language %>" class="btn-primary-custom"><%= tt('pages.about.viewProjects') %></a>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

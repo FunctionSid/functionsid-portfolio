@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="projects-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('pages.projects.eyebrow') %></p>
+    <h1 id="projects-title"><%= tt('pages.projects.heading') %></h1>
+    <p class="lead-text"><%= tt('pages.projects.lead') %></p>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="project-grid-title">
+  <div class="container">
+    <h2 id="project-grid-title" class="visually-hidden"><%= tt('pages.projects.listSr') %></h2>
+    <div class="project-grid">
+      <% projects.forEach((project) => { %>
+        <article class="project-card">
+          <img src="<%= project.image %>" alt="<%= project.imageAlt %>" width="640" height="360" loading="lazy">
+          <div class="project-card-body">
+            <p class="project-meta"><%= project.category %></p>
+            <h3><%= project.title %></h3>
+            <p><%= project.summary %></p>
+            <div class="badge-row" aria-label="<%= tt('common.technologiesUsed') %>">
+              <% project.technologies.slice(0, 6).forEach((technology) => { %>
+                <span class="badge-custom"><%= technology %></span>
+              <% }) %>
+            </div>
+            <a href="/projects/<%= project.slug %>?lang=<%= language %>" class="btn-secondary-custom"><%= tt('common.readCaseStudy') %></a>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

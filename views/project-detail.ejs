@@ -1,0 +1,112 @@
+<%- include('partials/header') %>
+
+<article>
+  <section class="page-hero project-hero" aria-labelledby="project-title">
+    <div class="container page-hero-grid">
+      <div>
+        <p class="eyebrow"><%= project.category %></p>
+        <h1 id="project-title"><%= project.title %></h1>
+        <p class="hero-subtitle"><%= project.subtitle %></p>
+        <p class="lead-text"><%= project.overview %></p>
+        <p class="project-status"><strong><%= tt('pages.projectDetail.status') %></strong> <%= project.status %></p>
+      </div>
+      <figure class="project-figure">
+        <img src="<%= project.image %>" alt="<%= project.imageAlt %>" width="640" height="360" loading="eager">
+        <figcaption><%= tt('pages.projectDetail.primaryImage', { title: project.title }) %></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section-shell" aria-labelledby="case-study-title">
+    <div class="container">
+      <div class="case-study-grid">
+        <section class="case-section" aria-labelledby="problem-title">
+          <h2 id="problem-title"><%= tt('pages.projectDetail.problem') %></h2>
+          <p><%= project.problem %></p>
+        </section>
+        <section class="case-section" aria-labelledby="solution-title">
+          <h2 id="solution-title"><%= tt('pages.projectDetail.solution') %></h2>
+          <p><%= project.solution %></p>
+        </section>
+        <section class="case-section" aria-labelledby="architecture-title">
+          <h2 id="architecture-title"><%= tt('pages.projectDetail.architecture') %></h2>
+          <ul>
+            <% project.architecture.forEach((item) => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </section>
+        <section class="case-section" aria-labelledby="tech-title">
+          <h2 id="tech-title"><%= tt('pages.projectDetail.technologies') %></h2>
+          <div class="badge-row">
+            <% project.technologies.forEach((technology) => { %>
+              <span class="badge-custom"><%= technology %></span>
+            <% }) %>
+          </div>
+        </section>
+        <section class="case-section" aria-labelledby="accessibility-title">
+          <h2 id="accessibility-title"><%= tt('pages.projectDetail.accessibility') %></h2>
+          <ul>
+            <% project.accessibility.forEach((item) => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </section>
+        <section class="case-section" aria-labelledby="challenges-title">
+          <h2 id="challenges-title"><%= tt('pages.projectDetail.challenges') %></h2>
+          <ul>
+            <% project.challenges.forEach((item) => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </section>
+        <section class="case-section" aria-labelledby="skills-title">
+          <h2 id="skills-title"><%= tt('pages.projectDetail.skills') %></h2>
+          <ul>
+            <% project.skills.forEach((item) => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </section>
+        <section class="case-section" aria-labelledby="outcome-title">
+          <h2 id="outcome-title"><%= tt('pages.projectDetail.outcome') %></h2>
+          <p><%= project.outcome %></p>
+        </section>
+        <section class="case-section" aria-labelledby="future-title">
+          <h2 id="future-title"><%= tt('pages.projectDetail.future') %></h2>
+          <ul>
+            <% project.future.forEach((item) => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <% if (project.secondaryImage) { %>
+    <section class="section-shell section-muted" aria-labelledby="supporting-image-title">
+      <div class="container">
+        <figure class="wide-figure">
+          <img src="<%= project.secondaryImage %>" alt="<%= project.secondaryImageAlt %>" width="960" height="540" loading="lazy">
+          <figcaption id="supporting-image-title"><%= tt('pages.projectDetail.supportingImage', { title: project.title }) %></figcaption>
+        </figure>
+      </div>
+    </section>
+  <% } %>
+</article>
+
+<section class="cta-band" aria-labelledby="project-next-title">
+  <div class="container cta-inner">
+    <div>
+      <h2 id="project-next-title"><%= tt('pages.projectDetail.nextTitle') %></h2>
+      <p><%= tt('pages.projectDetail.nextText') %></p>
+    </div>
+    <div class="hero-actions">
+      <a href="/projects?lang=<%= language %>" class="btn-secondary-custom"><%= tt('pages.projectDetail.allProjects') %></a>
+      <a href="/contact?lang=<%= language %>" class="btn-primary-custom"><%= tt('pages.projectDetail.contact') %></a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

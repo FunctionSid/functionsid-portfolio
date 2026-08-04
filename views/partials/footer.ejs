@@ -1,0 +1,61 @@
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="/images/functionsid-logo.png" alt="<%= t('brand.logoAlt') %>" width="40" height="40">
+        <div>
+          <p class="footer-title">FunctionSid</p>
+          <p class="footer-note"><%= t('footer.a11yNote') %></p>
+        </div>
+      </div>
+
+      <nav class="footer-contact" aria-label="<%= tt('footer.contactNav') %>">
+        <ul class="footer-contact-list">
+          <li>
+            <a href="mailto:siddharth@kalantri.in" aria-label="<%= tt('footer.emailAria') %>">
+              <img src="/icons/mail.svg" alt="" width="18" height="18" aria-hidden="true">
+              <span><%= tt('footer.email') %></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/918983330673" target="_blank" rel="noopener noreferrer" aria-label="<%= tt('footer.whatsappAria') %>">
+              <img src="/icons/whatsapp.svg" alt="" width="18" height="18" aria-hidden="true">
+              <span><%= tt('footer.whatsapp') %></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/FunctionSid" target="_blank" rel="noopener noreferrer" aria-label="<%= tt('footer.telegramAria') %>">
+              <img src="/icons/telegram.svg" alt="" width="18" height="18" aria-hidden="true">
+              <span><%= tt('footer.telegram') %></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/FunctionSid" target="_blank" rel="noopener noreferrer" aria-label="<%= tt('footer.githubAria') %>">
+              <img src="/icons/github.svg" alt="" width="18" height="18" aria-hidden="true">
+              <span><%= tt('footer.github') %></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav aria-label="<%= tt('footer.footerNav') %>">
+        <ul class="footer-links">
+          <li><a href="/accessibility?lang=<%= language %>"><%= tt('common.accessibility') %></a></li>
+          <li><a href="/privacy?lang=<%= language %>"><%= tt('common.privacy') %></a></li>
+          <li><a href="/contact?lang=<%= language %>"><%= tt('common.contact') %></a></li>
+          <li><a href="/Siddharth_Kalantri_Resume.pdf"><%= tt('common.resumePdf') %></a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-meta">
+        <p class="footer-copy"><%= t('footer.copyright', { year: currentYear }) %></p>
+        <p class="footer-note"><%= t('footer.location') %></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

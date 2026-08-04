@@ -1,0 +1,190 @@
+<%- include('partials/header') %>
+
+<section class="hero-section" aria-labelledby="home-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><%= tt('pages.home.eyebrow') %></p>
+      <h1 id="home-title"><%= profile.shortName %></h1>
+      <p class="hero-subtitle"><%= tt('pages.home.subtitle') %></p>
+      <p class="lead-text"><%= profile.summary %></p>
+      <div class="hero-actions">
+        <a href="/projects?lang=<%= language %>" class="btn-primary-custom">
+          <i data-lucide="folder-code" aria-hidden="true"></i>
+          <span><%= tt('pages.home.viewProjects') %></span>
+        </a>
+        <a href="/contact?lang=<%= language %>" class="btn-secondary-custom">
+          <i data-lucide="mail" aria-hidden="true"></i>
+          <span><%= tt('pages.home.contactSiddharth') %></span>
+        </a>
+      </div>
+    </div>
+
+    <aside class="hero-evidence" aria-labelledby="evidence-title">
+      <img src="/images/functionsid-logo.png" alt="<%= t('brand.logoAlt') %>" width="160" height="160" class="hero-logo">
+      <h2 id="evidence-title"><%= tt('pages.home.evidenceTitle') %></h2>
+      <ul class="check-list">
+        <% profile.proofPoints.forEach((point) => { %>
+          <li><i data-lucide="check-circle-2" aria-hidden="true"></i><span><%= point %></span></li>
+        <% }) %>
+      </ul>
+      <div class="auth-panel" aria-labelledby="public-auth-title">
+        <h2 id="public-auth-title"><%= tt('auth.title') %></h2>
+        <% if (publicUser) { %>
+          <p><%= tt('auth.signedIn', { name: publicUser.displayName || publicUser.email }) %></p>
+          <p class="small-label"><%= publicUser.isAdmin ? tt('auth.adminRole') : tt('auth.guestRole') %></p>
+          <div class="hero-actions compact-actions">
+            <% if (publicUser.isAdmin) { %>
+              <a href="/admin" class="btn-primary-custom"><%= tt('auth.adminDashboard') %></a>
+            <% } %>
+            <form action="/auth/logout" method="POST">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <button type="submit" class="btn-secondary-custom"><%= tt('auth.signOut') %></button>
+            </form>
+          </div>
+        <% } else { %>
+          <p><%= tt('auth.guestText') %></p>
+          <% if (req.query.auth === 'failed') { %>
+            <div class="form-alert error" role="alert"><%= tt('auth.authFailed') %></div>
+          <% } %>
+          <form id="publicGoogleLogin" action="/auth/google" method="POST"
+            data-firebase-api-key="<%= firebaseConfig.apiKey %>"
+            data-firebase-auth-domain="<%= firebaseConfig.authDomain %>"
+            data-firebase-project-id="<%= firebaseConfig.projectId %>"
+            data-firebase-storage-bucket="<%= firebaseConfig.storageBucket %>"
+            data-firebase-messaging-sender-id="<%= firebaseConfig.messagingSenderId %>"
+            data-firebase-app-id="<%= firebaseConfig.appId %>"
+            data-status-opening="<%= tt('auth.opening') %>"
+            data-status-verified="<%= tt('auth.verified') %>"
+            data-status-failed="<%= tt('auth.failed') %>">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <input type="hidden" id="publicIdToken" name="idToken">
+            <button id="publicGoogleLoginButton" type="button" class="btn-secondary-custom">
+              <i data-lucide="log-in" aria-hidden="true"></i>
+              <span><%= tt('auth.button') %></span>
+            </button>
+            <p class="form-note" id="publicLoginStatus" role="status" aria-live="polite"></p>
+          </form>
+        <% } %>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="focus-title">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow"><%= tt('pages.home.focusEyebrow') %></p>
+      <h2 id="focus-title"><%= tt('pages.home.focusTitle') %></h2>
+      <p><%= tt('pages.home.focusText') %></p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <i data-lucide="shield-check" aria-hidden="true"></i>
+        <h3><%= tt('pages.home.focusCards.0.title') %></h3>
+        <p><%= tt('pages.home.focusCards.0.text') %></p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="server" aria-hidden="true"></i>
+        <h3><%= tt('pages.home.focusCards.1.title') %></h3>
+        <p><%= tt('pages.home.focusCards.1.text') %></p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="brain" aria-hidden="true"></i>
+        <h3><%= tt('pages.home.focusCards.2.title') %></h3>
+        <p><%= tt('pages.home.focusCards.2.text') %></p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="cloud" aria-hidden="true"></i>
+        <h3><%= tt('pages.home.focusCards.3.title') %></h3>
+        <p><%= tt('pages.home.focusCards.3.text') %></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell section-muted" aria-labelledby="featured-projects-title">
+  <div class="container">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow"><%= tt('pages.home.featuredEyebrow') %></p>
+        <h2 id="featured-projects-title"><%= tt('pages.home.featuredTitle') %></h2>
+        <p><%= tt('pages.home.featuredText') %></p>
+      </div>
+      <a href="/projects?lang=<%= language %>" class="btn-secondary-custom"><%= tt('common.allProjects') %></a>
+    </div>
+
+    <div class="project-grid">
+      <% featuredProjects.forEach((project) => { %>
+        <article class="project-card">
+          <img src="<%= project.image %>" alt="<%= project.imageAlt %>" width="640" height="360" loading="lazy">
+          <div class="project-card-body">
+            <p class="project-meta"><%= project.category %></p>
+            <h3><%= project.title %></h3>
+            <p><%= project.summary %></p>
+            <div class="badge-row" aria-label="<%= tt('common.technologiesUsed') %>">
+              <% project.technologies.slice(0, 5).forEach((technology) => { %>
+                <span class="badge-custom"><%= technology %></span>
+              <% }) %>
+            </div>
+            <a href="/projects/<%= project.slug %>?lang=<%= language %>" class="card-link"><%= tt('common.readCaseStudy') %></a>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="cert-title">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow"><%= tt('pages.home.certEyebrow') %></p>
+      <h2 id="cert-title"><%= tt('pages.home.certTitle') %></h2>
+      <p><%= tt('pages.home.certText') %></p>
+    </div>
+
+    <div class="evidence-strip">
+      <% certifications.slice(0, 4).forEach((certification) => { %>
+        <article class="mini-card">
+          <h3><%= certification.title %></h3>
+          <p><%= certification.issuer %></p>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell section-muted" aria-labelledby="timeline-title">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow"><%= tt('pages.home.timelineEyebrow') %></p>
+      <h2 id="timeline-title"><%= tt('pages.home.timelineTitle') %></h2>
+    </div>
+    <ol class="timeline-list">
+      <% timeline.forEach((item) => { %>
+        <li>
+          <span><%= item.period %></span>
+          <h3><%= item.title %></h3>
+          <p><%= item.description %></p>
+        </li>
+      <% }) %>
+    </ol>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="home-contact-title">
+  <div class="container cta-inner">
+    <div>
+      <p class="eyebrow"><%= tt('pages.home.ctaEyebrow') %></p>
+      <h2 id="home-contact-title"><%= tt('pages.home.ctaTitle') %></h2>
+      <p><%= tt('pages.home.ctaText') %></p>
+    </div>
+    <a href="/contact?lang=<%= language %>" class="btn-primary-custom">
+      <i data-lucide="send" aria-hidden="true"></i>
+      <span><%= tt('pages.home.ctaButton') %></span>
+    </a>
+  </div>
+</section>
+
+<script type="module" src="/js/public-auth.js"></script>
+<%- include('partials/footer') %>

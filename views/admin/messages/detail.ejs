@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+<section class="page-hero" aria-labelledby="message-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('admin.message') %></p>
+    <h1 id="message-title"><%= message.subject %></h1>
+    <p class="lead-text"><%= tt('admin.fromPerson', { name: message.fullName, email: message.email }) %></p>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="container narrow-container">
+    <article class="form-card">
+      <p><strong><%= tt('admin.status') %>:</strong> <%= tt(`admin.options.${message.status}`, { defaultValue: message.status }) %></p>
+      <p><strong><%= tt('admin.received') %>:</strong> <%= message.createdAt %></p>
+      <p><%= message.message %></p>
+      <form method="POST" action="/admin/messages/<%= message.id %>/status">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <label for="status"><%= tt('admin.updateStatus') %></label>
+        <select id="status" name="status">
+          <% ['unread', 'read', 'archived'].forEach((status) => { %>
+            <option value="<%= status %>" <%= message.status === status ? 'selected' : '' %>><%= tt(`admin.options.${status}`) %></option>
+          <% }) %>
+        </select>
+        <button class="btn-secondary-custom" type="submit"><%= tt('admin.saveStatus') %></button>
+      </form>
+      <form method="POST" action="/admin/messages/<%= message.id %>/delete">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <button class="btn-secondary-custom" type="submit"><%= tt('admin.deleteMessage') %></button>
+      </form>
+    </article>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

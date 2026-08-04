@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="skills-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('pages.skills.eyebrow') %></p>
+    <h1 id="skills-title"><%= tt('pages.skills.heading') %></h1>
+    <p class="lead-text"><%= tt('pages.skills.lead') %></p>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="skills-grid-title">
+  <div class="container">
+    <h2 id="skills-grid-title" class="visually-hidden"><%= tt('pages.skills.groupsSr') %></h2>
+    <div class="feature-grid two-col">
+      <% skills.forEach((group) => { %>
+        <article class="feature-card">
+          <i data-lucide="<%= group.icon %>" aria-hidden="true"></i>
+          <h3><%= group.title %></h3>
+          <div class="badge-row">
+            <% group.items.forEach((item) => { %>
+              <span class="badge-custom"><%= item %></span>
+            <% }) %>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell section-muted" aria-labelledby="roadmap-title">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow"><%= tt('pages.skills.roadmapEyebrow') %></p>
+      <h2 id="roadmap-title"><%= tt('pages.skills.roadmapTitle') %></h2>
+      <p><%= tt('pages.skills.roadmapText') %></p>
+    </div>
+    <ul class="check-list columns">
+      <% learningRoadmap.forEach((item) => { %>
+        <li><i data-lucide="arrow-up-right" aria-hidden="true"></i><span><%= item %></span></li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

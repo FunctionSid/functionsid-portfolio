@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<section class="page-hero" aria-labelledby="server-error-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('common.error') %></p>
+    <h1 id="server-error-title"><%= tt('pages.errors.serverTitle') %></h1>
+    <p class="lead-text"><%= tt('pages.errors.serverText') %></p>
+    <a href="/?lang=<%= language %>" class="btn-primary-custom">
+      <i data-lucide="arrow-left" aria-hidden="true"></i>
+      <span><%= tt('common.backHome') %></span>
+    </a>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="services-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('pages.servicesPage.eyebrow') %></p>
+    <h1 id="services-title"><%= tt('pages.servicesPage.heading') %></h1>
+    <p class="lead-text"><%= tt('pages.servicesPage.lead') %></p>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="availability-title">
+  <div class="container">
+    <div class="availability-panel">
+      <div>
+        <p class="eyebrow"><%= tt('pages.servicesPage.availabilityEyebrow') %></p>
+        <h2 id="availability-title"><%= tt('pages.servicesPage.availabilityTitle') %></h2>
+        <p><%= tt('pages.servicesPage.availabilityText') %></p>
+      </div>
+      <ul class="check-list columns">
+        <% profile.availability.forEach((item) => { %>
+          <li><i data-lucide="check-circle-2" aria-hidden="true"></i><span><%= item %></span></li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell section-muted" aria-labelledby="service-catalog-title">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow"><%= tt('pages.servicesPage.catalogEyebrow') %></p>
+      <h2 id="service-catalog-title"><%= tt('pages.servicesPage.catalogTitle') %></h2>
+      <p><%= tt('pages.servicesPage.catalogText') %></p>
+    </div>
+    <div class="feature-grid two-col">
+      <% services.forEach((service) => { %>
+        <article class="feature-card service-card">
+          <i data-lucide="<%= service.icon %>" aria-hidden="true"></i>
+          <h3><%= service.title %></h3>
+          <p><%= service.description %></p>
+          <ul>
+            <% service.items.forEach((item) => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="services-contact-title">
+  <div class="container cta-inner">
+    <div>
+      <h2 id="services-contact-title"><%= tt('pages.servicesPage.ctaTitle') %></h2>
+      <p><%= tt('pages.servicesPage.ctaText') %></p>
+    </div>
+    <a href="/contact?lang=<%= language %>" class="btn-primary-custom"><%= tt('pages.servicesPage.ctaButton') %></a>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

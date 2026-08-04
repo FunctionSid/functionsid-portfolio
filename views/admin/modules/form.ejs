@@ -1,0 +1,64 @@
+<%- include('../partials/header') %>
+
+<section class="page-hero" aria-labelledby="content-form-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt(`admin.modules.${module.key}.label`) %></p>
+    <h1 id="content-form-title"><%= item ? tt('admin.edit') : tt('admin.create') %> <%= tt(`admin.modules.${module.key}.singular`) %></h1>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="container narrow-container">
+    <% if (errors && errors.length) { %>
+      <div class="form-alert error" role="alert">
+        <p><%= tt('common.pleaseCorrect') %></p>
+        <ul><% errors.forEach((error) => { %><li><%= error %></li><% }) %></ul>
+      </div>
+    <% } %>
+    <form class="form-card" method="POST" action="<%= item ? `/admin/${moduleKey}/${item.id}` : `/admin/${moduleKey}` %>">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <div class="form-field">
+        <label for="title"><%= tt('admin.title') %></label>
+        <input id="title" name="title" required value="<%= item ? item.title : (formData.title || '') %>">
+      </div>
+      <div class="form-field">
+        <label for="slug"><%= tt('admin.slug') %></label>
+        <input id="slug" name="slug" value="<%= item ? item.slug : (formData.slug || '') %>">
+      </div>
+      <div class="form-field">
+        <label for="status"><%= tt('admin.status') %></label>
+        <select id="status" name="status">
+          <% ['published', 'draft', 'archived'].forEach((status) => { %>
+            <option value="<%= status %>" <%= (item ? item.status : formData.status) === status ? 'selected' : '' %>><%= tt(`admin.options.${status}`) %></option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="displayOrder"><%= tt('admin.displayOrder') %></label>
+        <input id="displayOrder" name="displayOrder" type="number" value="<%= item ? item.displayOrder : (formData.displayOrder || 0) %>">
+      </div>
+      <% ['subtitle', 'category', 'issuer', 'date', 'statusText', 'url', 'image', 'imageAlt'].forEach((field) => { %>
+        <div class="form-field">
+          <label for="<%= field %>"><%= tt(`admin.fields.${field}`) %></label>
+          <input id="<%= field %>" name="<%= field %>" value="<%= formData[field] || '' %>">
+        </div>
+      <% }) %>
+      <% ['summary', 'description', 'problem', 'solution', 'outcome'].forEach((field) => { %>
+        <div class="form-field">
+          <label for="<%= field %>"><%= tt(`admin.fields.${field}`) %></label>
+          <textarea id="<%= field %>" name="<%= field %>" rows="4"><%= formData[field] || '' %></textarea>
+        </div>
+      <% }) %>
+      <% ['technologies', 'items', 'challenges', 'future'].forEach((field) => { %>
+        <div class="form-field">
+          <label for="<%= field %>"><%= tt(`admin.fields.${field}`) %> <span class="form-note"><%= tt('admin.onePerLine') %></span></label>
+          <textarea id="<%= field %>" name="<%= field %>" rows="5"><%= Array.isArray(formData[field]) ? formData[field].join('\n') : (formData[field] || '') %></textarea>
+        </div>
+      <% }) %>
+      <button class="btn-primary-custom" type="submit"><%= tt('admin.save') %> <%= tt(`admin.modules.${module.key}.singular`) %></button>
+      <a class="btn-secondary-custom" href="/admin/<%= moduleKey %>"><%= tt('admin.cancel') %></a>
+    </form>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

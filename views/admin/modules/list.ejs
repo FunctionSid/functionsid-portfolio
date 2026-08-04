@@ -1,0 +1,67 @@
+<%- include('../partials/header') %>
+
+<section class="page-hero" aria-labelledby="module-title">
+  <div class="container">
+    <p class="eyebrow"><%= tt('admin.content') %></p>
+    <h1 id="module-title"><%= tt(`admin.modules.${module.key}.label`) %></h1>
+    <p class="lead-text"><%= tt('admin.manageModule', { module: tt(`admin.modules.${module.key}.label`).toLowerCase() }) %></p>
+    <a class="btn-primary-custom" href="/admin/<%= moduleKey %>/new"><%= tt('admin.create') %> <%= tt(`admin.modules.${module.key}.singular`) %></a>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="container">
+    <form class="toolbar-form" method="GET" action="/admin/<%= moduleKey %>">
+      <label for="search"><%= tt('admin.search') %></label>
+      <input id="search" name="search" type="search" value="<%= query.search || '' %>">
+      <label for="sort"><%= tt('admin.sortBy') %></label>
+      <select id="sort" name="sort">
+        <% ['order', 'title', 'created', 'updated'].forEach((option) => { %>
+          <option value="<%= option %>" <%= query.sort === option ? 'selected' : '' %>><%= tt(`admin.options.${option}`) %></option>
+        <% }) %>
+      </select>
+      <label for="direction"><%= tt('admin.direction') %></label>
+      <select id="direction" name="direction">
+        <option value="ASC" <%= query.direction !== 'DESC' ? 'selected' : '' %>><%= tt('admin.ascending') %></option>
+        <option value="DESC" <%= query.direction === 'DESC' ? 'selected' : '' %>><%= tt('admin.descending') %></option>
+      </select>
+      <button class="btn-secondary-custom" type="submit"><%= tt('admin.apply') %></button>
+    </form>
+
+    <div class="table-responsive">
+      <table class="table table-dark table-striped align-middle">
+        <caption><%= tt(`admin.modules.${module.key}.label`) %> <%= tt('admin.records') %></caption>
+        <thead><tr><th><%= tt('admin.title') %></th><th><%= tt('admin.slug') %></th><th><%= tt('admin.status') %></th><th><%= tt('admin.order') %></th><th><%= tt('admin.actions') %></th></tr></thead>
+        <tbody>
+          <% items.forEach((item) => { %>
+            <tr>
+              <td><%= item.title %></td>
+              <td><code><%= item.slug %></code></td>
+              <td><%= tt(`admin.options.${item.status}`, { defaultValue: item.status }) %></td>
+              <td><%= item.displayOrder %></td>
+              <td>
+                <a href="/admin/<%= moduleKey %>/<%= item.id %>/edit"><%= tt('admin.edit') %></a>
+                <form action="/admin/<%= moduleKey %>/<%= item.id %>/delete" method="POST" class="d-inline">
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <button type="submit" class="button-link"><%= tt('admin.delete') %></button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <nav aria-label="<%= tt('admin.pagination', { module: tt(`admin.modules.${module.key}.label`) }) %>">
+      <p><%= tt('admin.pageSummary', { page: pagination.page, totalPages: pagination.totalPages, total: pagination.total }) %></p>
+      <% if (pagination.page > 1) { %>
+        <a href="/admin/<%= moduleKey %>?page=<%= pagination.page - 1 %>&search=<%= query.search || '' %>"><%= tt('admin.previous') %></a>
+      <% } %>
+      <% if (pagination.page < pagination.totalPages) { %>
+        <a href="/admin/<%= moduleKey %>?page=<%= pagination.page + 1 %>&search=<%= query.search || '' %>"><%= tt('admin.next') %></a>
+      <% } %>
+    </nav>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<section class="section-shell foundation-shell" aria-labelledby="foundation-title">
+  <div class="container">
+    <div class="foundation-grid">
+      <div class="foundation-copy">
+        <p class="eyebrow"><%= t('foundation.eyebrow') %></p>
+        <h1 id="foundation-title"><%= t('foundation.title') %></h1>
+        <p class="lead-text"><%= t('foundation.description') %></p>
+      </div>
+
+      <aside class="status-panel" aria-labelledby="foundation-status-title">
+        <h2 id="foundation-status-title"><%= t('foundation.statusTitle') %></h2>
+        <ul class="status-list">
+          <% foundationItems.forEach((item) => { %>
+            <li>
+              <i data-lucide="check-circle-2" aria-hidden="true"></i>
+              <span><%= item %></span>
+            </li>
+          <% }) %>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="architecture-panel" aria-labelledby="architecture-title">
+      <h2 id="architecture-title"><%= t('foundation.architectureTitle') %></h2>
+      <ol class="architecture-list">
+        <% architectureLayers.forEach((layer) => { %>
+          <li><%= layer %></li>
+        <% }) %>
+      </ol>
+    </section>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="privacy-title">
+  <div class="container narrow-container">
+    <p class="eyebrow"><%= tt('pages.privacy.eyebrow') %></p>
+    <h1 id="privacy-title"><%= tt('pages.privacy.heading') %></h1>
+    <p class="lead-text"><%= tt('pages.privacy.lead') %></p>
+  </div>
+</section>
+
+<section class="section-shell" aria-labelledby="privacy-content-title">
+  <div class="container narrow-container">
+    <% const privacySections = t('ui.pages.privacy.sections', { returnObjects: true }); %>
+    <% privacySections.forEach((section, index) => { %>
+      <h2 id="<%= index === 0 ? 'privacy-content-title' : '' %>"><%= section.title %></h2>
+      <p><%= section.text %><% if (index === privacySections.length - 1) { %> <a href="mailto:<%= profile.publicEmail %>"><%= profile.publicEmail %></a>.<% } %></p>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

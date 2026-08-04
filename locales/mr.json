@@ -1,0 +1,1314 @@
+{
+  "nav": {
+    "skipLink": "मुख्य मजकुराकडे जा",
+    "home": "होम",
+    "services": "सेवा",
+    "about": "माझ्याबद्दल",
+    "projects": "प्रकल्प",
+    "skills": "कौशल्ये",
+    "certifications": "प्रमाणपत्रे",
+    "accessibility": "ॲक्सेसिबिलिटी विधान",
+    "contact": "संपर्क",
+    "admin": "ॲडमिन",
+    "toggleTheme": "डार्क मोड बदला",
+    "selectLang": "भाषा",
+    "toggleMenu": "नेव्हिगेशन मेनू उघडा किंवा बंद करा",
+    "mainNavigation": "मुख्य नेव्हिगेशन",
+    "foundation": "फाउंडेशन",
+    "health": "हेल्थ"
+  },
+  "brand": {
+    "logoAlt": "FunctionSid लोगो - सिद्धार्थ कलंत्री, ॲक्सेसिबिलिटी इंजिनिअर, Node.js डेव्हलपर, क्लाउड आणि AI"
+  },
+  "foundation": {
+    "meta": {
+      "title": "फाउंडेशन",
+      "description": "ॲक्सेसिबल, सर्व्हर-रेंडर्ड पोर्टफोलिओ विकासासाठी FunctionSid एप्लिकेशन फाउंडेशन."
+    },
+    "eyebrow": "फेज 1 फाउंडेशन",
+    "title": "FunctionSid एप्लिकेशन फाउंडेशन",
+    "description": "शेअर्ड एप्लिकेशन शेल पुढील वेबसाइट पेजेससाठी तयार आहे. हा फेज सार्वजनिक वेबसाइट सामग्री लागू न करता सर्व्हर, लेआउट, ॲक्सेसिबिलिटी, थीम, लोकलायझेशन, लॉगिंग आणि Oracle डेटाबेस आर्किटेक्चर स्थापित करतो.",
+    "statusTitle": "फाउंडेशन स्कोप",
+    "architectureTitle": "एप्लिकेशन फ्लो"
+  },
+  "errors": {
+    "backToFoundation": "फाउंडेशनवर परत जा",
+    "notFound": {
+      "eyebrow": "404",
+      "title": "पेज सापडले नाही",
+      "description": "हा रूट सध्याच्या FunctionSid फाउंडेशनचा भाग नाही."
+    },
+    "server": {
+      "eyebrow": "त्रुटी",
+      "title": "काहीतरी चूक झाली",
+      "description": "एप्लिकेशन ही विनंती पूर्ण करू शकले नाही. पुनरावलोकनासाठी त्रुटी लॉग केली आहे."
+    }
+  },
+  "hero": {
+    "title": "सिद्धार्थ दिलीप कलंत्री",
+    "subtitle": "ॲक्सेसिबिलिटी इंजिनिअर • फुल-स्टॅक डेव्हलपर • एआय उत्सुक",
+    "pitch": "२० हून अधिक वर्षांचा स्क्रीन रीडर पॉवर-युझर, जो WCAG 2.2 AA ॲक्सेसिबिलिटी, Node.js बॅकएंड इंजिनिअरिंग, ओरॅकल क्लाउड इन्फ्रास्ट्रक्चर आणि एआय उपायांमध्ये तज्ज्ञ आहे.",
+    "ctaServices": "सेवा पहा",
+    "ctaContact": "संपर्क साधा"
+  },
+  "opportunities": {
+    "badge": "फक्त रिमोट काम",
+    "title": "संधींसाठी उपलब्ध",
+    "description": "मी जागतिक पातळीवर आणि संपूर्ण भारतात रिमोट संधी शोधत आहे. २०+ वर्षांचा स्क्रीन रीडर युझर, ॲक्सेसिबिलिटी ऑडिटर आणि फुल-स्टॅक डेव्हलपर म्हणून एक वेगळा दृष्टिकोन देतो.",
+    "statusRemote": "रिमोट कामासाठी उपलब्ध",
+    "statusFreelance": "फ्रीलान्स प्रोजेक्ट्स स्वीकारत आहे",
+    "statusStartup": "स्टार्टअप सहकार्यासाठी उत्सुक",
+    "statusLongTerm": "दीर्घकालीन संधींसाठी उत्सुक",
+    "modelsTitle": "काम करण्याचे प्रकार",
+    "modelFullTime": "रिमोट पूर्णवेळ पदे",
+    "modelPartTime": "रिमोट अर्धवेळ पदे",
+    "modelFreelance": "फ्रीलान्स वेबसाइट डेव्हलपमेंट",
+    "modelContract": "कंत्राटी प्रकल्प",
+    "modelStartup": "स्टार्टअप सहकार्य",
+    "modelPartnership": "दीर्घकालीन ग्राहक भागीदारी"
+  },
+  "services": {
+    "title": "सेवा आणि उपाय",
+    "subtitle": "सर्वसमावेशक ॲक्सेसिबिलिटी चाचणी, वेब डेव्हलपमेंट, क्लाउड उपयोजन आणि तांत्रिक सल्लागार.",
+    "catAccessibility": "ॲक्सेसिबिलिटी सेवा",
+    "catWebDev": "वेबसाइट डेव्हलपमेंट",
+    "catNodeDev": "Node.js डेव्हलपमेंट",
+    "catCloud": "क्लाउड आणि डेप्लॉयमेंट",
+    "catDatabase": "डेटाबेस सेवा",
+    "catAI": "एआय एकत्रीकरण",
+    "catMaintenance": "देखभाल आणि पाठिंबा",
+    "catDocumentation": "तांत्रिक दस्तऐवजीकरण",
+    "supportedPlatforms": "समर्थित क्लाउड प्लॅटफॉर्म",
+    "platformOCI": "ओरॅकल क्लाउड इन्फ्रास्ट्रक्चर (OCI)",
+    "platformAzure": "मायक्रोसॉफ्ट अझूर",
+    "items": {
+      "a11yTestingWeb": "वेबसाइट ॲक्सेसिबिलिटी चाचणी",
+      "a11yTestingApp": "वेब ॲप्लिकेशन ॲक्सेसिबिलिटी चाचणी",
+      "a11yTestingAndroid": "एंड्रॉइड ॲप ॲक्सेसिबिलिटी चाचणी",
+      "a11yAudits": "WCAG 2.2 ॲक्सेसिबिलिटी ऑडिट",
+      "a11yScreenReaders": "स्क्रीन रीडर चाचणी (NVDA आणि JAWS)",
+      "a11yKeyboard": "कीबोर्ड नेव्हिगेशन चाचणी",
+      "a11yReports": "ॲक्सेसिबिलिटी ऑडिट अहवाल",
+      "a11yConsultation": "ॲक्सेसिबिलिटी सल्लागार",
+      "a11yVerification": "ॲक्सेसिबिलिटी पडताळणी",
+      "webPortfolio": "पोर्टफोलिओ वेबसाइट डेव्हलपमेंट",
+      "webBusiness": "व्यवसाय वेबसाइट डेव्हलपमेंट",
+      "webPersonal": "वैयक्तिक वेबसाइट डेव्हलपमेंट",
+      "webNGO": "एनजीओ वेबसाइट डेव्हलपमेंट",
+      "webEducational": "शैक्षणिक वेबसाइट डेव्हलपमेंट",
+      "webLanding": "लँडिंग पेज डेव्हलपमेंट",
+      "webResponsive": "रिस्पॉन्सिव्ह वेबसाइट डेव्हलपमेंट",
+      "webRedesign": "वेबसाइट रीडिझाइन",
+      "webMaintenance": "वेबसाइट देखभाल",
+      "nodeExpress": "Express.js डेव्हलपमेंट",
+      "nodeApi": "REST API डेव्हलपमेंट",
+      "nodeAuth": "ऑथेंटिकेशन सिस्टम्स",
+      "nodeCrud": "CRUD ॲप्लिकेशन्स",
+      "nodeAdmin": "ॲडमिन डॅशबोर्ड",
+      "nodeForms": "संपर्क फॉर्म",
+      "nodeEjs": "EJS ॲप्लिकेशन्स",
+      "cloudOciVm": "ओरॅकल क्लाउड VM डेप्लॉयमेंट",
+      "cloudOciLinux": "ओरॅकल लिनक्स सर्व्हर कॉन्फिगरेशन",
+      "cloudAzureApp": "मायक्रोसॉफ्ट अझूर ॲप सर्व्हिस डेप्लॉयमेंट",
+      "cloudAzureVm": "मायक्रोसॉफ्ट अझूर व्हर्च्युअल मशीन डेप्लॉयमेंट",
+      "cloudNodeProd": "Node.js प्रोडक्शन डेप्लॉयमेंट",
+      "cloudLinuxConfig": "लिनक्स सर्व्हर कॉन्फिगरेशन",
+      "cloudNginx": "Nginx कॉन्फिगरेशन",
+      "cloudPm2": "PM2 कॉन्फिगरेशन",
+      "cloudSsl": "SSL प्रमाणपत्र सेटअप (Let's Encrypt)",
+      "cloudDomain": "डोमेन कॉन्फिगरेशन",
+      "cloudGithub": "GitHub डेप्लॉयमेंट वर्कफ्लो",
+      "cloudMigration": "वेबसाइट मायग्रेशन",
+      "dbOracle": "ओरॅकल स्वायत्त डेटाबेस एकत्रीकरण",
+      "dbSqlite": "Oracle SQL डेव्हलपमेंट",
+      "dbDesign": "SQL डेटाबेस डिझाइन",
+      "dbQueries": "SQL क्वेरी डेव्हलपमेंट",
+      "aiChatbot": "एआय चॅटबॉट एकत्रीकरण",
+      "aiOpenAI": "OpenAI API एकत्रीकरण",
+      "aiSearch": "एआय व्हेक्टर सर्च एकत्रीकरण",
+      "aiFeatures": "वेबसाइट्ससाठी एआय फीचर्स",
+      "aiPrompting": "प्रॉम्प्ट इंजिनिअरिंग",
+      "maintFixes": "वेबसाइट बग फिक्स",
+      "maintPerf": "वेबसाइट कार्यक्षमता सुधारणा",
+      "maintSecurity": "सुरक्षा अपडेट्स",
+      "maintMonitoring": "वेबसाइट मॉनिटरिंग",
+      "maintContent": "मजकूर अपडेट्स",
+      "docProject": "प्रकल्प दस्तऐवजीकरण",
+      "docApi": "API दस्तऐवजीकरण",
+      "docDeploy": "डेप्लॉयमेंट दस्तऐवजीकरण",
+      "docTechnical": "तांत्रिक दस्तऐवजीकरण",
+      "docReadme": "README निर्मिती"
+    }
+  },
+  "idealOpportunities": {
+    "title": "माझ्यासाठी आदर्श संधी",
+    "subtitle": "ज्या टीम आणि प्रकल्पांमध्ये मी सर्वाधिक मूल्य प्रदान करू शकतो.",
+    "enjoyTeamsTitle": "मला यांच्यासोबत काम करायला आवडते",
+    "teamStartups": "स्टार्टअप्स आणि नाविन्यपूर्ण संघ",
+    "teamGrowing": "वाढणाऱ्या कंपन्या",
+    "teamTech": "तंत्रज्ञान आणि इंजिनिअरिंग टीम्स",
+    "teamA11y": "ॲक्सेसिबिलिटी केंद्रित उपक्रम",
+    "teamAI": "एआय आणि ऑटोमेशन प्रोजेक्ट्स",
+    "teamCloud": "क्लाउड इन्फ्रास्ट्रक्चर प्रोजेक्ट्स",
+    "teamWeb": "आधुनिक रिस्पॉन्सिव्ह वेब ॲप्लिकेशन्स",
+    "solvingTitle": "वास्तविक समस्या सोडवणे",
+    "toolA11y": "डिजिटल ॲक्सेसिबिलिटी (WCAG 2.2 AA)",
+    "toolNode": "Node.js आणि Express आर्किटेक्चर",
+    "toolOCI": "ओरॅकल क्लाउड इन्फ्रास्ट्रक्चर (OCI)",
+    "toolAzure": "मायक्रोसॉफ्ट अझूर",
+    "toolAI": "आर्टिफिशियल इंटेलिजन्स आणि RAG मॉडेल्स",
+    "toolModernWeb": "आधुनिक वेब तंत्रज्ञान (HTML5, Bootstrap 5, EJS)"
+  },
+  "hireMe": {
+    "title": "चला एकत्र सर्वसमावेशक उपाय बनवूया",
+    "subtitle": "फ्रीलान्स प्रकल्प, रिमोट पदे आणि तांत्रिक भागीदारीसाठी उपलब्ध.",
+    "ctaButton": "आजच संपर्क साधा",
+    "availFreelance": "फ्रीलान्स प्रकल्प",
+    "availFullTime": "रिमोट पूर्णवेळ नोकऱ्या",
+    "availPartTime": "रिमोट अर्धवेळ नोकऱ्या",
+    "availStartup": "स्टार्टअप सहकार्य",
+    "availPartnership": "दीर्घकालीन तांत्रिक भागीदारी"
+  },
+  "footer": {
+    "copyright": "© {{year}} सिद्धार्थ दिलीप कलंत्री. सर्व हक्क राखीव.",
+    "a11yNote": "WCAG 2.2 AA मानकानुसार तयार आणि NVDA व JAWS सोबत चाचणी केलेले.",
+    "location": "भिवंडी, महाराष्ट्र, भारत"
+  },
+  "ui": {
+    "meta": {
+      "siteName": "FunctionSid",
+      "description": "FunctionSid हा सिद्धार्थ कलंत्री यांचा ॲक्सेसिबल पोर्टफोलिओ आहे, जो ॲक्सेसिबिलिटी इंजिनिअरिंग, Node.js, AI आणि क्लाउड-रेडी वेब ॲप्सवर केंद्रित आहे.",
+      "ogType": "website"
+    },
+    "language": {
+      "english": "इंग्रजी",
+      "hindi": "हिंदी",
+      "marathi": "मराठी"
+    },
+    "common": {
+      "functionSidHome": "FunctionSid होम",
+      "brandSubtitle": "ॲक्सेसिबिलिटी, Node.js, क्लाउड आणि AI",
+      "resume": "रिझ्युमे",
+      "resumePdf": "रिझ्युमे PDF",
+      "accessibility": "ॲक्सेसिबिलिटी",
+      "privacy": "गोपनीयता",
+      "contact": "संपर्क",
+      "allProjects": "सर्व प्रकल्प",
+      "readCaseStudy": "केस स्टडी वाचा",
+      "technologiesUsed": "वापरलेली तंत्रज्ञाने",
+      "backHome": "होमपेजवर परत जा",
+      "required": "आवश्यक",
+      "pleaseCorrect": "कृपया पुढील दुरुस्त करा:",
+      "pageOf": "पेज {{page}} / {{totalPages}}. {{total}} नोंदी.",
+      "previous": "मागील",
+      "next": "पुढील",
+      "apply": "लागू करा",
+      "cancel": "रद्द करा",
+      "save": "सेव्ह करा",
+      "delete": "काढा",
+      "edit": "संपादित करा",
+      "create": "तयार करा",
+      "view": "पहा",
+      "status": "स्थिती",
+      "received": "प्राप्त",
+      "from": "कडून",
+      "action": "क्रिया",
+      "type": "प्रकार",
+      "name": "नाव",
+      "path": "पाथ",
+      "size": "आकार",
+      "bytes": "बाइट",
+      "error": "त्रुटी",
+      "securityCheckFailed": "सुरक्षा तपासणी अयशस्वी",
+      "accessDenied": "प्रवेश नाकारला"
+    },
+    "footer": {
+      "contactNav": "फुटर संपर्क दुवे",
+      "emailAria": "सिद्धार्थला siddharth@kalantri.in वर ईमेल करा",
+      "whatsappAria": "नवीन टॅबमध्ये सिद्धार्थसोबत WhatsApp चॅट उघडा",
+      "telegramAria": "नवीन टॅबमध्ये सिद्धार्थसोबत Telegram चॅट उघडा",
+      "githubAria": "नवीन टॅबमध्ये FunctionSid GitHub वर उघडा",
+      "footerNav": "फुटर नेव्हिगेशन",
+      "email": "siddharth@kalantri.in",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "github": "GitHub"
+    },
+    "pages": {
+      "home": {
+        "title": "मुख्य पृष्ठ",
+        "eyebrow": "FunctionSid पोर्टफोलिओ",
+        "subtitle": "ॲक्सेसिबिलिटी इंजिनिअर, फुल-स्टॅक डेव्हलपर, क्लाउड कंप्यूटिंग शिकणारे आणि AI उत्सुक.",
+        "viewProjects": "प्रकल्प पहा",
+        "contactSiddharth": "सिद्धार्थशी संपर्क साधा",
+        "evidenceTitle": "ही साइट काय सिद्ध करते",
+        "focusEyebrow": "मुख्य फोकस",
+        "focusTitle": "ॲक्सेसिबिलिटीसह व्यावहारिक इंजिनिअरिंग",
+        "focusText": "Siddharth web applications, assistive technology, AI search आणि cloud deployment वर accessibility आणि maintainability ला समान महत्त्व देऊन काम करतात.",
+        "focusCards": [
+          {
+            "title": "Accessibility engineering",
+            "text": "WCAG 2.2 AA, NVDA आणि JAWS testing, semantic HTML, accessible forms आणि keyboard navigation review."
+          },
+          {
+            "title": "Node.js applications",
+            "text": "Express, EJS, REST APIs, middleware आणि maintainable server-rendered web application foundations."
+          },
+          {
+            "title": "AI आणि retrieval systems",
+            "text": "RAG pipelines, source-aware answers, vector search, chatbot workflows आणि practical prompt engineering."
+          },
+          {
+            "title": "Cloud-ready delivery",
+            "text": "Oracle Cloud Infrastructure, Oracle Linux, PM2, Nginx, Azure fundamentals आणि low-resource deployment planning."
+          }
+        ],
+        "featuredEyebrow": "चयनित कार्य",
+        "featuredTitle": "दस्तऐवजीकृत तांत्रिक निर्णय असलेले प्रकल्प",
+        "featuredText": "प्रत्येक case study problem, solution, architecture, accessibility considerations आणि future improvements स्पष्ट करते.",
+        "certEyebrow": "प्रमाण",
+        "certTitle": "प्रमाणपत्र और निरंतर सीखना",
+        "certText": "Credentials portfolio ला support करतात आणि experience वाढवून सांगत नाहीत. ते Azure, accessibility, AI आणि productivity workflows मधील focused learning दाखवतात.",
+        "timelineEyebrow": "हाल की सीख",
+        "timelineTitle": "सॉफ्टवेयर में व्यावहारिक स्व-निर्देशित यात्रा",
+        "ctaEyebrow": "रिमोट अवसर",
+        "ctaTitle": "क्या आपको एक्सेसिबिलिटी-केंद्रित इंजीनियर चाहिए?",
+        "ctaText": "Siddharth remote work, freelance projects आणि accessibility व reliability महत्त्वाच्या असलेल्या technical collaboration साठी उपलब्ध आहेत.",
+        "ctaButton": "संवाद सुरू करा"
+      },
+      "about": {
+        "title": "परिचय",
+        "eyebrow": "परिचय",
+        "heading": "अनुभव आणि सॉफ्टवेअर सरावातून घडलेला ॲक्सेसिबिलिटी दृष्टिकोन",
+        "lead": "सिद्धार्थ कलंत्री हे भिवंडी, महाराष्ट्र येथील ॲक्सेसिबिलिटी-केंद्रित सॉफ्टवेअर इंजिनिअर आहेत.",
+        "portraitAlt": "सिद्धार्थ कलंत्री यांचे छायाचित्र.",
+        "portraitCaption": "Siddharth Kalantri, FunctionSid",
+        "journeyEyebrow": "प्रवास",
+        "journeyTitle": "जुळवून घेण्यावर आधारित करिअर बदल",
+        "journey": [
+          "Siddharth यांनी BNN College, Bhiwandi मधून Drugs and Dyes Chemistry मध्ये B.Sc. केले. Graduation नंतर त्यांनी family flour mill business मध्ये काम केले आणि ISMT मध्ये Flour Milling Technology शिकले.",
+          "Retinal detachment मुळे glaucoma झाला आणि पाच ते सात वर्षांत दोन्ही डोळ्यांची दृष्टी गेली. त्या बदलानंतर त्यांनी screen-reader workflows, keyboard navigation आणि assistive technology मध्ये मजबूत proficiency तयार केली.",
+          "सुमारे 2022 मध्ये online learning अधिक accessible झाल्यानंतर त्यांनी software development, accessibility engineering, cloud systems आणि AI-assisted applications मध्ये focused transition सुरू केले. FunctionSid हा त्या documented learning आणि practical project work चा portfolio आहे."
+        ],
+        "educationEyebrow": "शिक्षण आणि दिशा",
+        "educationTitle": "व्यावहारिक परिणामांशी जोडलेले शिक्षण",
+        "cards": [
+          {
+            "title": "शिक्षण",
+            "text": "BNN College, Bhiwandi मधून Drugs and Dyes Chemistry मध्ये B.Sc. तसेच International School of Milling Technology मध्ये Flour Milling Technology शिकले."
+          },
+          {
+            "title": "Accessibility background",
+            "text": "20 वर्षांपेक्षा जास्त real screen-reader use forms, navigation, headings, keyboard behavior आणि content structure च्या review ला आधार देतो."
+          },
+          {
+            "title": "Learning philosophy",
+            "text": "ते documented projects तयार करून, real workflows test करून आणि accessibility feedback व technical review मधून काम सुधारत शिकतात."
+          },
+          {
+            "title": "Professional direction",
+            "text": "Accessibility engineering, Node.js applications, assistive technology, AI integration, database-backed systems आणि cloud deployment."
+          }
+        ],
+        "timelineEyebrow": "टाइमलाइन",
+        "timelineTitle": "FunctionSid के पीछे की यात्रा",
+        "nextTitle": "प्रोफाइलमागील काम पहा",
+        "nextText": "प्रोजेक्ट पेज सिद्धार्थ के बनाए कार्य और इंजीनियरिंग निर्णय समझाता है.",
+        "viewProjects": "प्रकल्प पहा"
+      },
+      "servicesPage": {
+        "title": "सेवा",
+        "eyebrow": "सेवा",
+        "heading": "रिमोट ॲक्सेसिबिलिटी, वेब डेव्हलपमेंट, क्लाउड, AI आणि दस्तऐवजीकरण सेवा",
+        "lead": "Services documented strengths भोवती scoped आहेत: accessibility testing, Node.js आणि EJS web development, Oracle-aligned database work, cloud deployment आणि practical AI integration.",
+        "availabilityEyebrow": "उपलब्धता",
+        "availabilityTitle": "फक्त रिमोट संधी",
+        "availabilityText": "Siddharth global आणि India-based remote work साठी उपलब्ध आहेत. Engagements freelance, contract, part-time किंवा documented long-term collaboration असू शकतात.",
+        "catalogEyebrow": "कॅटलॉग",
+        "catalogTitle": "स्पष्ट मर्यादांसह विशिष्ट सेवा",
+        "catalogText": "Catalog unsupported claims टाळतो आणि documented project capabilities शी aligned राहतो.",
+        "ctaTitle": "तुमच्या प्रकल्पाला ॲक्सेसिबिलिटी आणि अंमलबजावणीची काळजी हवी आहे का?",
+        "ctaText": "Project context, timeline आणि accessibility expectations शेअर करा. Contact form किंवा प्रत्येक page च्या footer contact links वापरा.",
+        "ctaButton": "सिद्धार्थशी संपर्क साधा"
+      },
+      "projects": {
+        "title": "प्रोजेक्ट्स",
+        "eyebrow": "प्रकल्प",
+        "heading": "ॲक्सेसिबिलिटी, AI, बॅकएंड आणि असिस्टिव्ह टेक्नॉलॉजी केस स्टडीज",
+        "lead": "प्रत्येक project documented portfolio work म्हणून मांडले आहे. Pages problem, solution, architecture, accessibility review, challenges, outcome आणि future improvements समजावतात.",
+        "listSr": "प्रकल्प केस स्टडी यादी"
+      },
+      "projectDetail": {
+        "status": "स्थिती:",
+        "primaryImage": "{{title}} ची primary project image.",
+        "problem": "समस्या",
+        "solution": "उपाय",
+        "architecture": "Architecture",
+        "technologies": "Technologies",
+        "accessibility": "Accessibility Review",
+        "challenges": "आव्हाने",
+        "skills": "दाखवलेली कौशल्ये",
+        "outcome": "परिणाम",
+        "future": "Future Improvements",
+        "supportingImage": "{{title}} मधील supporting screenshot.",
+        "nextTitle": "Portfolio review सुरू ठेवा",
+        "nextText": "Full projects list वर परत जा किंवा related accessibility आणि engineering work बाबत Siddharth शी संपर्क करा.",
+        "allProjects": "सर्व प्रोजेक्ट्स",
+        "contact": "संपर्क"
+      },
+      "skills": {
+        "title": "कौशल्ये",
+        "eyebrow": "कौशल्ये",
+        "heading": "समस्या सोडवण्याच्या आधारे मांडलेली व्यावहारिक कौशल्ये",
+        "lead": "हे page Siddharth च्या documented capabilities accessibility, frontend, backend, cloud, AI, databases आणि tools मध्ये group करते.",
+        "groupsSr": "कौशल्य गट",
+        "roadmapEyebrow": "शिकण्याचा रोडमॅप",
+        "roadmapTitle": "सतत सुधारण्याची सध्याची क्षेत्रे",
+        "roadmapText": "Roadmap जाणीवपूर्वक practical आहे आणि FunctionSid architecture व documented portfolio gaps शी जोडलेला आहे."
+      },
+      "certifications": {
+        "title": "प्रमाणपत्रे",
+        "eyebrow": "प्रमाणपत्रे",
+        "heading": "पोर्टफोलिओ पुराव्याला आधार देणारी प्रमाणपत्रे",
+        "lead": "Certifications issuer, documented status आणि skills gained सह मांडली आहेत. कोणताही undocumented credential ID invent केलेला नाही.",
+        "categoriesSr": "प्रमाणपत्र श्रेणी",
+        "categoriesAria": "प्रमाणपत्र श्रेणी",
+        "issuer": "जारीकर्ता",
+        "date": "तारीख",
+        "credentialId": "क्रेडेन्शियल ID",
+        "skillsGained": "मिळालेली कौशल्ये"
+      },
+      "resume": {
+        "title": "रिझ्युमे",
+        "eyebrow": "रिझ्युमे",
+        "heading": "सिद्धार्थ कलंत्री यांचा रिझ्युमे सारांश",
+        "lead": "Siddharth च्या accessibility background, engineering projects, education, certifications आणि service areas चा concise overview.",
+        "download": "रिझ्युमे PDF डाउनलोड करा",
+        "print": "पेज प्रिंट करा",
+        "contentAria": "रिझ्युमे सामग्री",
+        "summaryTitle": "व्यावसायिक सारांश",
+        "summarySuffix": "त्यांचा सर्वात मजबूत differentiator म्हणजे long-term screen-reader experience आणि hands-on software engineering practice यांचे संयोजन.",
+        "experienceTitle": "अनुभव आणि प्रकल्प कार्य",
+        "educationTitle": "शिक्षण",
+        "educationText": "BNN College, Bhiwandi मधून Drugs and Dyes Chemistry मध्ये B.Sc. Vision loss पूर्वी International School of Milling Technology मध्ये Flour Milling Technology pursued केले.",
+        "certificationsTitle": "प्रमाणपत्रे",
+        "skillsTitle": "कौशल्ये"
+      },
+      "contact": {
+        "title": "संपर्क",
+        "eyebrow": "संपर्क",
+        "heading": "स्पष्ट आणि व्यावहारिक संवाद सुरू करा",
+        "lead": "Remote work, freelance website development, accessibility testing, technical documentation, AI integration किंवा cloud-ready Node.js application work साठी संपर्क करा.",
+        "informationTitle": "संपर्क माहिती",
+        "email": "ईमेल",
+        "location": "स्थान",
+        "quickTitle": "जलद संदेश",
+        "quickText": "जलद संदेशासाठी प्रत्येक पेजच्या फुटरमधील WhatsApp आणि Telegram दुवे वापरा.",
+        "formTitle": "संपर्क फॉर्म",
+        "formNote": "Messages administrator review साठी securely saved होतात. SMTP configured असल्यास email delivery attempt केली जाते.",
+        "success": "धन्यवाद. तुमचा संदेश जतन झाला आहे आणि review केला जाईल.",
+        "fullName": "पूर्ण नाव",
+        "nameHelp": "Reply करताना Siddharth यांनी पाहावा असा नाव लिहा.",
+        "emailAddress": "ईमेल पत्ता",
+        "emailHelp": "Reply context साठी हे field आवश्यक आहे.",
+        "subject": "विषय",
+        "message": "संदेश",
+        "send": "संदेश पाठवा",
+        "validationRequired": "Message पाठवण्यापूर्वी required fields पूर्ण करा."
+      },
+      "privacy": {
+        "title": "गोपनीयता धोरण",
+        "eyebrow": "गोपनीयता",
+        "heading": "गोपनीयता धोरण",
+        "lead": "ही public portfolio site चालवण्यासाठी आणि contact messages हाताळण्यासाठी आवश्यक माहितीच store करते.",
+        "sections": [
+          {
+            "title": "ही site सध्या काय करते",
+            "text": "Website portfolio content, images, project case studies, resume link, contact information आणि Oracle-backed contact form दाखवते."
+          },
+          {
+            "title": "संकलित माहिती",
+            "text": "Contact form submit झाल्यावर name, email address, subject आणि message save होतात जेणेकरून Siddharth review करून reply करू शकतील."
+          },
+          {
+            "title": "Cookies आणि preferences",
+            "text": "Site language, theme आणि secure session preferences store करू शकते जेणेकरून interface selected settings लक्षात ठेवेल."
+          },
+          {
+            "title": "Third-party services",
+            "text": "Firebase Authentication administrator login साठी वापरले जाते. Bootstrap, Google Fonts आणि selected scripts project documentation नुसार public CDNs मधून load होतात."
+          },
+          {
+            "title": "संपर्क",
+            "text": "Privacy questions पाठवता येतील"
+          }
+        ]
+      },
+      "accessibility": {
+        "title": "Accessibility विधान",
+        "eyebrow": "Accessibility विधान",
+        "heading": "FunctionSid साठी ॲक्सेसिबिलिटी ही मुख्य आवश्यकता आहे",
+        "lead": "ही website WCAG 2.2 Level AA target करते आणि keyboard navigation, semantic HTML, visible focus states तसेच NVDA आणि JAWS screen-reader compatibility साठी design केली आहे.",
+        "commitmentTitle": "बांधिलकी",
+        "commitmentText": "Siddharth Kalantri हे blind developer आणि long-term screen-reader user आहेत. हा अनुभव site structure, navigation, forms, headings आणि content clarity घडवतो.",
+        "practicesTitle": "सध्याचे ॲक्सेसिबिलिटी सराव",
+        "practices": [
+          "Skip link पहिला focusable element म्हणून उपलब्ध आहे.",
+          "प्रत्येक page एक main heading आणि semantic landmarks वापरतो.",
+          "Navigation active states aria-current सह वापरते.",
+          "Interactive controls visible focus indicators राखतात.",
+          "Images मध्ये meaningful alternative text आहे.",
+          "Motion reduced-motion preferences चा आदर करते.",
+          "Contact form fields explicit labels आणि required-state markup वापरतात."
+        ],
+        "testingTitle": "चाचणी लक्ष्य",
+        "testingText": "Automated, browser, keyboard, NVDA आणि JAWS checks project quality process चा भाग आहेत.",
+        "feedbackTitle": "अभिप्राय",
+        "feedbackText": "Accessibility barrier आढळल्यास Siddharth शी संपर्क करा"
+      },
+      "errors": {
+        "notFoundTitle": "Page सापडले नाही",
+        "notFoundText": "Requested page उपलब्ध नाही. Main navigation वापरा किंवा public portfolio homepage वर परत जा.",
+        "serverTitle": "काहीतरी चूक झाली",
+        "serverText": "Application ही request पूर्ण करू शकले नाही. Issue review साठी logged आहे.",
+        "csrfTitle": "सुरक्षा तपासणी अयशस्वी",
+        "csrfText": "फॉर्म सुरक्षा टोकन अवैध होता. कृपया मागे जा, पेज रिफ्रेश करा आणि पुन्हा प्रयत्न करा.",
+        "accessDeniedTitle": "प्रवेश नाकारला",
+        "accessDeniedText": "हा भाग फक्त कॉन्फिगर केलेल्या FunctionSid प्रशासकासाठी उपलब्ध आहे."
+      },
+      "adminLogin": {
+        "title": "प्रशासन लॉगिन",
+        "eyebrow": "प्रशासक",
+        "heading": "FunctionSid मध्ये साइन इन करा",
+        "lead": "Configured Google administrator account वापरा. Access {{email}} पर्यंत restricted आहे.",
+        "remember": "हा ॲडमिन सत्र लक्षात ठेवा",
+        "continue": "Google सह पुढे जा"
+      }
+    },
+    "admin": {
+      "titleSuffix": "FunctionSid प्रशासन",
+      "skip": "प्रशासन मजकुराकडे जा",
+      "navigation": "प्रशासक नेव्हिगेशन",
+      "brand": "FunctionSid प्रशासन",
+      "subtitle": "Oracle-आधारित पोर्टफोलिओ व्यवस्थापन",
+      "toggleMenu": "प्रशासन मेनू उघडा किंवा बंद करा",
+      "dashboard": "डॅशबोर्ड",
+      "messages": "संदेश",
+      "uploads": "अपलोड",
+      "publicSite": "सार्वजनिक साइट",
+      "logout": "लॉगआउट",
+      "statsAria": "पोर्टफोलिओ आकडे",
+      "projects": "प्रोजेक्ट्स",
+      "skills": "कौशल्ये",
+      "certifications": "प्रमाणपत्रे",
+      "experience": "अनुभव",
+      "education": "शिक्षण",
+      "unread": "न वाचलेले",
+      "system": "सिस्टम",
+      "content": "सामग्री",
+      "contentModules": "सामग्री मॉड्यूल",
+      "manageModule": "{{module}} रेकॉर्ड शोध, क्रमवारी, पेजिनेशन, वैधता तपासणी आणि Oracle persistence सह व्यवस्थापित करा.",
+      "openModule": "मॉड्यूल उघडा",
+      "recentActivity": "अलीकडील क्रिया",
+      "recentActivityCaption": "अलीकडील प्रशासक क्रिया",
+      "action": "क्रिया",
+      "entity": "घटक",
+      "details": "तपशील",
+      "when": "केव्हा",
+      "inbox": "इनबॉक्स",
+      "contactMessages": "संपर्क संदेश",
+      "search": "शोध",
+      "status": "स्थिती",
+      "apply": "लागू करा",
+      "messageInbox": "संपर्क संदेश इनबॉक्स",
+      "from": "पाठवणारा",
+      "subject": "विषय",
+      "received": "प्राप्त झाले",
+      "view": "पहा",
+      "message": "संदेश",
+      "fromPerson": "{{name}} <{{email}}> कडून",
+      "updateStatus": "स्थिती अपडेट करा",
+      "saveStatus": "स्थिती जतन करा",
+      "deleteMessage": "संदेश हटवा",
+      "files": "फाइल्स",
+      "uploadAssets": "अॅसेट अपलोड करा",
+      "uploadLead": "रिझ्युमे PDF, प्रमाणपत्रे, प्रोजेक्ट प्रतिमा आणि प्रोफाइल प्रतिमा प्रकार आणि आकार वैधता तपासणीसह अपलोड करा.",
+      "uploadType": "अपलोड प्रकार",
+      "file": "फाइल",
+      "uploadFile": "फाइल अपलोड करा",
+      "uploadedFiles": "अपलोड केलेल्या फाइल्स",
+      "type": "प्रकार",
+      "name": "नाव",
+      "path": "पाथ",
+      "size": "आकार",
+      "bytes": "बाइट",
+      "create": "तयार करा",
+      "edit": "संपादित करा",
+      "new": "नवे",
+      "save": "जतन करा",
+      "cancel": "रद्द करा",
+      "title": "शीर्षक",
+      "slug": "स्लग",
+      "displayOrder": "प्रदर्शन क्रम",
+      "sortBy": "यानुसार क्रमवारी लावा",
+      "direction": "दिशा",
+      "ascending": "चढता",
+      "descending": "उतरता",
+      "records": "रेकॉर्ड",
+      "order": "क्रम",
+      "actions": "क्रिया",
+      "pagination": "{{module}} पेजिनेशन",
+      "pageSummary": "पेज {{page}} / {{totalPages}}. {{total}} रेकॉर्ड.",
+      "previous": "मागील",
+      "next": "पुढील",
+      "onePerLine": "(प्रत्येक ओळीत एक)",
+      "fields": {
+        "subtitle": "उपशीर्षक",
+        "category": "श्रेणी",
+        "issuer": "जारीकर्ता",
+        "date": "तारीख",
+        "statusText": "स्थिती मजकूर",
+        "url": "URL",
+        "image": "प्रतिमा",
+        "imageAlt": "प्रतिमेचा पर्यायी मजकूर",
+        "summary": "सारांश",
+        "description": "वर्णन",
+        "problem": "समस्या",
+        "solution": "उपाय",
+        "outcome": "परिणाम",
+        "technologies": "तंत्रज्ञान",
+        "items": "आयटम",
+        "challenges": "आव्हाने",
+        "future": "भविष्यातील सुधारणा"
+      },
+      "options": {
+        "all": "सर्व",
+        "unread": "न वाचलेले",
+        "read": "वाचलेले",
+        "archived": "संग्रहित",
+        "published": "प्रकाशित",
+        "draft": "ड्राफ्ट",
+        "order": "क्रम",
+        "created": "तयार झाले",
+        "updated": "अपडेट झाले"
+      },
+      "pages": {
+        "dashboardTitle": "FunctionSid सामग्री संचालन",
+        "dashboardLead": "Oracle-backed रेकॉर्डमधून सार्वजनिक पोर्टफोलिओ डेटा, संपर्क संदेश, अपलोड आणि प्रशासक क्रिया व्यवस्थापित करा.",
+        "adminDashboardTitle": "प्रशासन डॅशबोर्ड",
+        "fileUploadsTitle": "फाइल अपलोड"
+      },
+      "modules": {
+        "projects": {
+          "label": "प्रोजेक्ट्स",
+          "singular": "प्रोजेक्ट"
+        },
+        "skills": {
+          "label": "कौशल्ये",
+          "singular": "कौशल्य"
+        },
+        "certifications": {
+          "label": "प्रमाणपत्रे",
+          "singular": "प्रमाणपत्र"
+        },
+        "experience": {
+          "label": "अनुभव",
+          "singular": "अनुभव"
+        },
+        "education": {
+          "label": "शिक्षण",
+          "singular": "शिक्षण"
+        },
+        "timeline": {
+          "label": "टाइमलाइन",
+          "singular": "टाइमलाइन नोंद"
+        },
+        "testimonials": {
+          "label": "प्रशंसापत्रे",
+          "singular": "प्रशंसापत्र"
+        },
+        "social-links": {
+          "label": "सोशल लिंक",
+          "singular": "सोशल लिंक"
+        },
+        "downloads": {
+          "label": "डाउनलोड",
+          "singular": "डाउनलोड"
+        }
+      },
+      "delete": "हटवा"
+    },
+    "content": {
+      "profile": {
+        "location": "भिवंडी, महाराष्ट्र, भारत",
+        "role": "Accessibility Engineer, Node.js Developer, Cloud आणि AI",
+        "summary": "Accessibility-focused software engineer जे server-rendered web applications, assistive technology tools, AI retrieval systems आणि cloud-ready Node.js services तयार करतात.",
+        "availability": [
+          "Remote full-time roles",
+          "Remote part-time roles",
+          "Freelance website development",
+          "Contract-based projects",
+          "Startup collaboration",
+          "Long-term technical partnerships"
+        ],
+        "proofPoints": [
+          "NVDA आणि JAWS screen reader चे 20+ वर्षांचे power user",
+          "Self-taught software development journey सुमारे 2022 मध्ये सुरू झाली",
+          "Accessibility, AI/RAG, Node.js, Python आणि Oracle Cloud वरील portfolio projects"
+        ],
+        "name": "Siddharth Dilip Kalantri",
+        "shortName": "Siddharth Kalantri",
+        "brand": "FunctionSid",
+        "publicEmail": "siddharth@kalantri.in",
+        "phoneDisplay": "+91 89833 30673",
+        "phoneHref": "+918983330673"
+      },
+      "projects": {
+        "lawgpt": {
+          "subtitle": "भारतीय चानून साठी accessible RAG legal assistant",
+          "category": "AI, Accessibility, Legal Documents",
+          "status": "Portfolio case study",
+          "imageAlt": "LawGPT interface जिसमें Constitution query, simple English output, inline citations और source references दिखते हैं.",
+          "secondaryImageAlt": "LawGPT chat interface जिसमें Bharatiya Nyaya Sanhita query और cited legal source references दिखते हैं.",
+          "summary": "एक accessible Retrieval-Augmented Generation assistant जे source transparency बनाए रखते हुए inline citations के साथ भारतीय कानूनी दस्तावेजें को सरल अंग्रेज़ी में समझाता है.",
+          "overview": "LawGPT उन लोगों साठी बनाया गया आहे जिन्हें मूल स्रोत से संबंध खोए बिना कानूनी पाठ की स्पष्ट व्याख्या चाहिए. यह Constitution of India और Bharatiya Nyaya Sanhita, 2023 के साथ काम करता आहे.",
+          "problem": "कानूनी दस्तावेज घने, औपचारिक और खोजने में कठिन होते हैं. पाठकों को अक्सर plain-language explanation और exact legal text तक भरोसेमंद रास्ता दोनों चाहिए.",
+          "solution": "यह project direct statute lookup, hybrid retrieval, dataset filtering और cited LLM responses को जोड़ता है. Interface keyboard-first और screen-reader friendly है.",
+          "architecture": [
+            "Express और EJS interface render करते हैं.",
+            "Retrieval layer regex lookup को hybrid search के साथ जोड़ती है.",
+            "Context blocks citation labels के साथ language model को भेजे जाते हैं.",
+            "Answer source text blocks से वापस link करता है."
+          ],
+          "accessibility": [
+            "Query input, sending, chat log और source references के लिए keyboard shortcuts.",
+            "Screen-reader optimized headings, source lists और plain text fallback.",
+            "Inline citations users को visual scanning के बिना answers verify करने में मदद करते हैं."
+          ],
+          "challenges": [
+            "Language सरल करते समय legal source accuracy बनाए रखना.",
+            "Constitution और BNS datasets को भरोसेमंद तरीके से अलग रखना.",
+            "Retrieved context blocks के साथ citations align रखना."
+          ],
+          "outcome": "यह case study complex legal content के लिए accessible AI design, retrieval architecture और practical source transparency दिखाती है.",
+          "skills": [
+            "RAG pipeline design",
+            "Node.js backend engineering",
+            "Accessible interaction design",
+            "Citation-aware response design"
+          ],
+          "future": [
+            "Legal corpus coverage बढ़ाना.",
+            "Citation consistency के लिए और validation जोड़ना.",
+            "Review के बाद multilingual legal explanations बढ़ाना."
+          ],
+          "slug": "lawgpt",
+          "title": "LawGPT",
+          "image": "/images/lawgpt-home.png",
+          "secondaryImage": "/images/lawgpt-chat.png",
+          "technologies": [
+            "Node.js",
+            "Express",
+            "EJS",
+            "RAG",
+            "Hybrid Search",
+            "Ola Krutrim API",
+            "Embeddings",
+            "Accessible HTML"
+          ]
+        },
+        "agriquery": {
+          "subtitle": "Accessible agricultural commodity price chatbot",
+          "category": "Government Data, Chatbot, Accessibility",
+          "status": "Completed",
+          "imageAlt": "AgriQuery homepage जिसमें agricultural commodity prices के लिए accessibility-first chatbot दिखता है.",
+          "secondaryImageAlt": "AgriQuery help page जिसमें commodity prices पर natural language questions पूछने का तरीका समझाया गया है.",
+          "summary": "एक web chatbot जे users को government data sources से official agricultural commodity prices पर natural-language questions पूछने में मदद करते.",
+          "overview": "AgriQuery farmers, traders, students और screen-reader users साठी daily mandi price information को आसान बनाता आहे.",
+          "problem": "Government market price data खोजना और समझना कठिन हो सकता है. Users official commodity names या बड़े datasets search करने का तरीका नहीं जानते.",
+          "solution": "Application natural-language queries स्वीकार करता है, common commodity names और synonyms संभालता है, official data fetch करता है और simple interface में relevant price information लौटाता है.",
+          "architecture": [
+            "Express chatbot interface serve करता है.",
+            "Scheduled data import local records current रखता है.",
+            "Natural-language matching user input को commodity data से map करती है.",
+            "Database queries market records जल्दी लौटाती हैं."
+          ],
+          "accessibility": [
+            "Semantic HTML और labeled form controls.",
+            "Keyboard-friendly chatbot workflow.",
+            "Screen readers के लिए clear status और error messaging."
+          ],
+          "challenges": [
+            "Inconsistent commodity names संभालना.",
+            "Government API data normalize करना.",
+            "Reliable results के साथ fuzzy matching balance करना."
+          ],
+          "outcome": "AgriQuery दिखाता है कि public data practical, accessible conversational tool कैसे बन सकता है.",
+          "skills": [
+            "Government API integration",
+            "Backend development",
+            "Database design",
+            "Automation",
+            "Accessibility engineering"
+          ],
+          "future": [
+            "और भारतीय भाषाएं जोड़ना.",
+            "Historical price trends जोड़ना.",
+            "Location-aware market suggestions बेहतर करना."
+          ],
+          "slug": "agriquery",
+          "title": "AgriQuery",
+          "image": "/images/agriquery-home-1.png",
+          "secondaryImage": "/images/agriquery-help.png",
+          "technologies": [
+            "Node.js",
+            "Express",
+            "EJS",
+            "SQLite3",
+            "Government APIs",
+            "JavaScript",
+            "Automation",
+            "Responsive Web Design"
+          ]
+        },
+        "dectalk-nvda-bridge": {
+          "subtitle": "Modern 64-bit NVDA साठी compatibility layer",
+          "category": "Assistive Technology, Accessibility Engineering",
+          "status": "Completed and maintained for future NVDA releases",
+          "imageAlt": "DECtalk NVDA Bridge infographic जिसमें modern 64-bit NVDA और legacy 32-bit DECtalk engine के बीच compatibility bridge दिखता है.",
+          "summary": "एक compatibility project जे modern 64-bit NVDA versions के लिए classic DECtalk speech synthesizer restore करते.",
+          "overview": "DECtalk NVDA Bridge कई blind computer users द्वारा इस्तेमाल किए जाने वाले legacy speech synthesizer तक access बनाए रखता आहे और उसे newer NVDA architecture साठी adapt करता आहे.",
+          "problem": "Modern NVDA releases को 64-bit compatibility चाहिए, जबकि original DECtalk speech engine 32-bit Windows component है.",
+          "solution": "Bridge original DECtalk engine को untouched रखता है और NVDA SynthDriverHost32 के माध्यम से modern NVDA को legacy speech component से जोड़ता है.",
+          "architecture": [
+            "NVDA 2026.1 modern 64-bit screen reader के रूप में चलता है.",
+            "64-bit add-on SynthDriverHost32 के माध्यम से communicate करता है.",
+            "Original 32-bit DECtalk engine speech output produce करता है."
+          ],
+          "accessibility": [
+            "Blind NVDA users के लिए familiar speech option preserve करता है.",
+            "Clean startup, shutdown और stable speech output support करता है.",
+            "Original synthesizer बदले बिना compatibility maintain करता है."
+          ],
+          "challenges": [
+            "64-bit और 32-bit components bridge करना.",
+            "NVDA speech driver architecture समझना.",
+            "Legacy output preserve करते हुए modern NVDA behavior पर testing करना."
+          ],
+          "outcome": "यह project NVDA 2026.1 पर DECtalk support restore करता है और assistive technology के लिए practical compatibility engineering दिखाता है.",
+          "skills": [
+            "Accessibility engineering",
+            "Legacy software modernization",
+            "Python development",
+            "Assistive technology testing"
+          ],
+          "future": [
+            "Future NVDA releases के लिए compatibility testing जारी रखना.",
+            "Installation और troubleshooting documentation बेहतर करना."
+          ],
+          "slug": "dectalk-nvda-bridge",
+          "title": "DECtalk NVDA Bridge",
+          "image": "/images/dectalk-nvda-bridge-project.png",
+          "technologies": [
+            "Python",
+            "NVDA Add-on API",
+            "Windows",
+            "DECtalk",
+            "SynthDriverHost32",
+            "Accessibility Engineering"
+          ]
+        },
+        "a11y-insights": {
+          "subtitle": "Web accessibility साठी educational platform",
+          "category": "WCAG, Front-End Development, Education",
+          "status": "Completed",
+          "imageAlt": "A11Y Insights website का homepage जिसमें main navigation और accessibility learning platform दिखता है.",
+          "secondaryImageAlt": "A11Y Insights accessibility tools page जिसमें WCAG testing tools और evaluation resources दिखते हैं.",
+          "summary": "एक educational web platform जे developers और students को accessibility concepts, WCAG principles और testing tools समझने में मदद करते.",
+          "overview": "A11Y Insights accessibility education को practical testing resources के साथ structured learning experience में organize करता आहे.",
+          "problem": "Accessibility learning resources अक्सर बिखरे होते हैं, जिससे beginners के लिए WCAG concepts समझना और useful testing tools चुनना कठिन हो जाता है.",
+          "solution": "Site accessibility principles, auditing guidance, browser extensions, case studies और learning resources को एक accessible platform में जोड़ती है.",
+          "architecture": [
+            "Static educational sections WCAG और testing content organize करते हैं.",
+            "JavaScript search और interactive learning areas support करता है.",
+            "Responsive layouts devices पर content readable रखते हैं."
+          ],
+          "accessibility": [
+            "Accessibility project subject और implementation standard दोनों है.",
+            "Content perceivable, operable, understandable और robust design cover करता है.",
+            "Screens और resources real testing tools समझाते हैं."
+          ],
+          "challenges": [
+            "बहुत अधिक educational material organize करना.",
+            "Beginner explanations को professional accessibility work से जोड़े रखना."
+          ],
+          "outcome": "यह project front-end development, information architecture, accessibility education और WCAG-centered content design दिखाता है.",
+          "skills": [
+            "Front-end development",
+            "Information architecture",
+            "WCAG education",
+            "Technical documentation"
+          ],
+          "future": [
+            "Interactive accessibility checker जोड़ना.",
+            "WCAG examples बढ़ाना.",
+            "Search और learner progress tracking बेहतर करना."
+          ],
+          "slug": "a11y-insights",
+          "title": "A11Y Insights",
+          "image": "/images/a11y-insights-home.png",
+          "secondaryImage": "/images/a11y-insights-accessibility-tools.png",
+          "technologies": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Web Design",
+            "Semantic HTML",
+            "WCAG Guidelines"
+          ]
+        },
+        "stream-ripper": {
+          "subtitle": "Accessible audio stream workflows साठी NVDA add-on",
+          "category": "NVDA Add-on, Python, Automation",
+          "status": "Open source utility",
+          "imageAlt": "NVDA Input Gestures dialog जिसमें Stream-Ripper add-on के keyboard shortcuts दिखते हैं.",
+          "summary": "एक accessibility-first NVDA add-on जे supported media URLs detect करते, yt-dlp से audio streams extract करते और FFmpeg conversion support करते.",
+          "overview": "Stream-Ripper screen-reader users को supported online audio streams extract और convert करने साठी keyboard-driven workflow देता आहे.",
+          "problem": "Audio extraction workflows अक्सर command-line tools और manual steps मांगते हैं, जो screen-reader productivity के आसपास design नहीं होते.",
+          "solution": "Add-on supported URLs monitor करता है, extraction और conversion tasks manage करता है और NVDA के माध्यम से progress announce करता है.",
+          "architecture": [
+            "NVDA add-on code screen reader environment के अंदर चलता है.",
+            "Clipboard monitoring supported media links detect करता है.",
+            "yt-dlp audio streams extract करता है.",
+            "FFmpeg optional conversion और output formats संभालता है."
+          ],
+          "accessibility": [
+            "Full keyboard navigation.",
+            "Status और progress के लिए screen-reader announcements.",
+            "Accessible settings dialog और native NVDA integration."
+          ],
+          "challenges": [
+            "Background conversion tasks manage करना.",
+            "External tools integrate करना ताकि users को command line में काम न करना पड़े.",
+            "Screen-reader users के लिए progress feedback clear रखना."
+          ],
+          "outcome": "यह project दिखाता है कि accessibility और automation everyday media workflows में friction कैसे कम कर सकते हैं.",
+          "skills": [
+            "Python development",
+            "NVDA extension development",
+            "Audio processing",
+            "Automation",
+            "Accessible desktop UI"
+          ],
+          "future": [
+            "More output profiles जोड़ना.",
+            "Queue reporting बेहतर करना.",
+            "Supported URL patterns को और अच्छी तरह document करना."
+          ],
+          "slug": "stream-ripper",
+          "title": "Stream-Ripper",
+          "image": "/images/stream-ripper-gesture.png",
+          "technologies": [
+            "Python",
+            "NVDA Add-on API",
+            "yt-dlp",
+            "FFmpeg",
+            "wxPython",
+            "JSON Configuration",
+            "Windows"
+          ]
+        }
+      },
+      "timeline": [
+        {
+          "period": "B.Sc. शिक्षण",
+          "title": "Chemistry foundation",
+          "description": "BNN College, Bhiwandi मधून Drugs and Dyes Chemistry मध्ये B.Sc. पूर्ण केले."
+        },
+        {
+          "period": "Family business आणि ISMT",
+          "title": "Flour milling आणि operations exposure",
+          "description": "Family flour mill business मध्ये काम केले आणि vision loss पूर्वी ISMT मध्ये Flour Milling Technology pursued केले."
+        },
+        {
+          "period": "Vision-loss adaptation",
+          "title": "Assistive technology mastery",
+          "description": "Complete vision loss नंतर NVDA, JAWS आणि keyboard-first computer workflows मध्ये मजबूत proficiency विकसित केली."
+        },
+        {
+          "period": "सुमारे 2022 onward",
+          "title": "Software development transition",
+          "description": "Web development, accessibility engineering, AI, databases आणि cloud computing मध्ये focused self-directed learning सुरू केले."
+        },
+        {
+          "period": "Current focus",
+          "title": "FunctionSid portfolio आणि public work",
+          "description": "Accessible applications, AI/RAG tools, NVDA add-ons आणि cloud-ready Node.js projects तयार करत आहेत."
+        }
+      ],
+      "learningRoadmap": [
+        "Deeper Oracle Autonomous Database integration",
+        "Production accessibility testing workflows",
+        "AI retrieval quality and citation validation",
+        "Azure and OCI deployment practice",
+        "Maintainable documentation for long-term projects"
+      ],
+      "services": [
+        {
+          "title": "Accessibility Services",
+          "icon": "shield-check",
+          "description": "ऐसी web experiences के लिए testing और guidance जिन्हें accessible, keyboard-friendly और screen-reader compatible होना चाहिए.",
+          "items": [
+            "Website accessibility testing",
+            "Web application accessibility testing",
+            "Android app accessibility testing",
+            "WCAG 2.2 accessibility audits",
+            "NVDA आणि JAWS screen reader testing",
+            "Keyboard navigation testing",
+            "Accessibility reports",
+            "Accessibility consultation",
+            "Accessibility verification"
+          ]
+        },
+        {
+          "title": "Website Development",
+          "icon": "layout",
+          "description": "Individuals, organizations, educational teams और small businesses के लिए accessible websites.",
+          "items": [
+            "Portfolio websites",
+            "Business websites",
+            "Personal websites",
+            "NGO websites",
+            "Educational websites",
+            "Landing pages",
+            "Responsive websites",
+            "Website redesign",
+            "Website maintenance"
+          ]
+        },
+        {
+          "title": "Node.js Development",
+          "icon": "server",
+          "description": "Maintainable Express architecture के साथ server-rendered और API-driven Node.js applications.",
+          "items": [
+            "Express.js development",
+            "REST API development",
+            "Authentication systems",
+            "CRUD applications",
+            "Admin dashboards",
+            "Contact forms",
+            "EJS applications"
+          ]
+        },
+        {
+          "title": "Cloud आणि Deployment",
+          "icon": "cloud",
+          "description": "Documented cloud targets और lightweight production environments के लिए practical deployment support.",
+          "items": [
+            "Oracle Cloud VM deployment",
+            "Oracle Linux server configuration",
+            "Microsoft Azure App Service deployment",
+            "Microsoft Azure virtual machine deployment",
+            "Node.js production deployment",
+            "Linux server configuration",
+            "Nginx configuration",
+            "PM2 configuration",
+            "Let's Encrypt सह SSL certificate setup",
+            "Domain configuration",
+            "GitHub deployment",
+            "Website migration"
+          ]
+        },
+        {
+          "title": "Database Services",
+          "icon": "database",
+          "description": "FunctionSid Oracle architecture और documented project experience के अनुसार SQL-focused database work.",
+          "items": [
+            "Oracle Autonomous Database integration",
+            "Oracle SQL development",
+            "SQL database design",
+            "SQL query development"
+          ]
+        },
+        {
+          "title": "AI Integration",
+          "icon": "bot",
+          "description": "Retrieval, clarity और practical user workflows पर ध्यान रखते हुए websites और tools के लिए AI features.",
+          "items": [
+            "AI chatbot integration",
+            "OpenAI API integration",
+            "AI search",
+            "Websites साठी AI features",
+            "Prompt engineering"
+          ]
+        },
+        {
+          "title": "Maintenance आणि Support",
+          "icon": "wrench",
+          "description": "Small websites और Node.js applications के लिए ongoing care जिन्हें reliability और clear documentation चाहिए.",
+          "items": [
+            "Website bug fixes",
+            "Website performance optimization",
+            "Security updates",
+            "Website monitoring",
+            "Content updates"
+          ]
+        },
+        {
+          "title": "Technical Documentation",
+          "icon": "file-text",
+          "description": "Projects, APIs, deployment processes और maintenance handoff के लिए readable technical documentation.",
+          "items": [
+            "Project documentation",
+            "API documentation",
+            "Deployment documentation",
+            "Technical documentation",
+            "README creation"
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "title": "Accessibility",
+          "icon": "shield-check",
+          "items": [
+            "WCAG 2.2 AA",
+            "NVDA testing",
+            "JAWS testing",
+            "Keyboard navigation",
+            "Screen reader auditing",
+            "Semantic HTML",
+            "Accessible forms",
+            "Accessibility reports"
+          ]
+        },
+        {
+          "title": "Frontend",
+          "icon": "monitor",
+          "items": [
+            "HTML5",
+            "CSS3",
+            "Bootstrap 5",
+            "Responsive design",
+            "Vanilla JavaScript",
+            "EJS templates",
+            "Accessible UI components"
+          ]
+        },
+        {
+          "title": "Backend",
+          "icon": "server",
+          "items": [
+            "Node.js",
+            "Express.js",
+            "REST APIs",
+            "MVC-style routing",
+            "Middleware",
+            "Server-rendered applications",
+            "Nodemailer integration"
+          ]
+        },
+        {
+          "title": "Cloud",
+          "icon": "cloud",
+          "items": [
+            "Oracle Cloud Infrastructure",
+            "Oracle Linux",
+            "Microsoft Azure",
+            "Nginx",
+            "PM2",
+            "Certbot",
+            "GitHub deployment workflows"
+          ]
+        },
+        {
+          "title": "AI",
+          "icon": "brain",
+          "items": [
+            "RAG pipelines",
+            "AI chatbot integration",
+            "Vector search",
+            "Prompt engineering",
+            "Source citation workflows",
+            "OpenAI API integration"
+          ]
+        },
+        {
+          "title": "Databases",
+          "icon": "database",
+          "items": [
+            "Oracle Autonomous Database",
+            "Oracle SQL",
+            "SQL database design",
+            "SQLite in project case studies",
+            "Parameterized queries"
+          ]
+        },
+        {
+          "title": "DevOps",
+          "icon": "git-branch",
+          "items": [
+            "Git",
+            "GitHub",
+            "Environment configuration",
+            "Linux server configuration",
+            "Application logging",
+            "Performance-aware deployment"
+          ]
+        },
+        {
+          "title": "Programming Languages",
+          "icon": "code-2",
+          "items": [
+            "JavaScript",
+            "Python",
+            "SQL",
+            "HTML",
+            "CSS"
+          ]
+        },
+        {
+          "title": "Tools",
+          "icon": "wrench",
+          "items": [
+            "VS Code",
+            "PowerShell",
+            "NVDA",
+            "JAWS",
+            "WAVE",
+            "Accessibility Insights",
+            "FFmpeg",
+            "yt-dlp"
+          ]
+        },
+        {
+          "title": "Operating Systems",
+          "icon": "hard-drive",
+          "items": [
+            "Windows 11",
+            "Oracle Linux 9.8",
+            "Linux server environments"
+          ]
+        }
+      ],
+      "certifications": [
+        {
+          "category": "तांत्रिक आणि accessibility",
+          "title": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+          "issuer": "Microsoft",
+          "date": "दस्तावेजित प्रमाणपत्र",
+          "credentialId": "दस्तावेजित नाही",
+          "skills": [
+            "Azure fundamentals",
+            "Cloud concepts",
+            "Microsoft cloud services"
+          ]
+        },
+        {
+          "category": "तांत्रिक आणि accessibility",
+          "title": "Web Development and Accessibility Testing",
+          "issuer": "PBMA / HSBC",
+          "date": "दस्तावेजित प्रमाणपत्र",
+          "credentialId": "Grade A, above 80%",
+          "skills": [
+            "Web development",
+            "Accessibility testing",
+            "WCAG awareness"
+          ]
+        },
+        {
+          "category": "तांत्रिक आणि accessibility",
+          "title": "Azure Data Engineering",
+          "issuer": "GiftAbled / Publicis Sapient",
+          "date": "दस्तावेजित प्रमाणपत्र",
+          "credentialId": "96% average score",
+          "skills": [
+            "Azure data concepts",
+            "Data engineering fundamentals"
+          ]
+        },
+        {
+          "category": "तांत्रिक आणि accessibility",
+          "title": "Fundamentals of AI and ML",
+          "issuer": "PBMA / VIT Pune",
+          "date": "दस्तावेजित प्रमाणपत्र",
+          "credentialId": "दस्तावेजित नाही",
+          "skills": [
+            "AI fundamentals",
+            "Machine learning concepts"
+          ]
+        },
+        {
+          "category": "Office आणि productivity",
+          "title": "Advance Microsoft Excel",
+          "issuer": "EnAble India / Rotary Cochin",
+          "date": "दस्तावेजित प्रमाणपत्र",
+          "credentialId": "पूर्ण",
+          "skills": [
+            "Spreadsheet workflows",
+            "Productivity"
+          ]
+        },
+        {
+          "category": "Office आणि productivity",
+          "title": "MS Excel Intensive Training",
+          "issuer": "Vision-Aid Academy",
+          "date": "दस्तावेजित प्रमाणपत्र",
+          "credentialId": "पूर्ण",
+          "skills": [
+            "Excel operations",
+            "Accessible productivity"
+          ]
+        },
+        {
+          "category": "Office आणि productivity",
+          "title": "Fundamentals of Outlook for Persons with Vision Impairment",
+          "issuer": "EnAble India / Rotary Cochin",
+          "date": "दस्तावेजित प्रमाणपत्र",
+          "credentialId": "Grade: Excellent",
+          "skills": [
+            "Email productivity",
+            "Accessible Outlook workflows"
+          ]
+        },
+        {
+          "category": "Communication आणि soft skills",
+          "title": "Advanced Communication Course for Persons with Vision Impairment",
+          "issuer": "EnAble India",
+          "date": "दस्तावेजित प्रमाणपत्र",
+          "credentialId": "Grade A",
+          "skills": [
+            "Communication",
+            "Professional readiness"
+          ]
+        },
+        {
+          "category": "Communication आणि soft skills",
+          "title": "Accessible Math with LaTeX",
+          "issuer": "DivyaAbility Foundation",
+          "date": "16-hour intensive",
+          "credentialId": "पूर्ण",
+          "skills": [
+            "Accessible math",
+            "LaTeX basics"
+          ]
+        }
+      ]
+    },
+    "auth": {
+      "title": "Google ने sign in करा",
+      "guestText": "Guests future FunctionSid features personalize करण्यासाठी sign in करू शकतात. Admin tools फक्त configured administrator account साठी दिसतात.",
+      "signedIn": "{{name}} म्हणून signed in",
+      "guestRole": "Guest access",
+      "adminRole": "Administrator access",
+      "adminDashboard": "Admin Dashboard",
+      "publicSite": "Public site",
+      "signOut": "Sign out",
+      "opening": "Google sign-in उघडत आहे.",
+      "verified": "Sign-in verified. तुमचे session load होत आहे.",
+      "failed": "Google sign-in पूर्ण होऊ शकले नाही. कृपया पुन्हा प्रयत्न करा.",
+      "button": "Google ने sign in करा",
+      "authFailed": "Sign-in पूर्ण होऊ शकले नाही. कृपया पुन्हा प्रयत्न करा."
+    }
+  }
+}

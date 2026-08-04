@@ -1,0 +1,63 @@
+<%- include('partials/header') %>
+
+<section class="page-hero" aria-labelledby="admin-dashboard-title">
+  <div class="container">
+    <p class="eyebrow"><%= tt('admin.dashboard') %></p>
+    <h1 id="admin-dashboard-title"><%= tt('admin.pages.dashboardTitle') %></h1>
+    <p class="lead-text"><%= tt('admin.pages.dashboardLead') %></p>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="container">
+    <div class="stats-grid" aria-label="<%= tt('admin.statsAria') %>">
+      <% [
+        [tt('admin.projects'), dashboard.totals.projects],
+        [tt('admin.skills'), dashboard.totals.skills],
+        [tt('admin.certifications'), dashboard.totals.certifications],
+        [tt('admin.experience'), dashboard.totals.experience],
+        [tt('admin.education'), dashboard.totals.education],
+        [tt('admin.messages'), dashboard.totals.contactMessages],
+        [tt('admin.unread'), dashboard.totals.unreadMessages]
+      ].forEach(([label, value]) => { %>
+        <article class="stat-card">
+          <p><%= label %></p>
+          <strong><%= value %></strong>
+        </article>
+      <% }) %>
+    </div>
+
+    <h2><%= tt('admin.contentModules') %></h2>
+    <div class="project-grid compact-grid">
+      <% modules.forEach((module) => { %>
+        <article class="project-card">
+          <div class="project-card-body">
+            <h3><%= tt(`admin.modules.${module.key}.label`) %></h3>
+            <p><%= tt('admin.manageModule', { module: tt(`admin.modules.${module.key}.label`).toLowerCase() }) %></p>
+            <a class="btn-secondary-custom" href="/admin/<%= module.key %>"><%= tt('admin.openModule') %></a>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+
+    <h2><%= tt('admin.recentActivity') %></h2>
+    <div class="table-responsive">
+      <table class="table table-dark table-striped align-middle">
+        <caption><%= tt('admin.recentActivityCaption') %></caption>
+        <thead><tr><th><%= tt('admin.action') %></th><th><%= tt('admin.entity') %></th><th><%= tt('admin.details') %></th><th><%= tt('admin.when') %></th></tr></thead>
+        <tbody>
+          <% dashboard.recentActivity.forEach((activity) => { %>
+            <tr>
+              <td><%= activity.action %></td>
+              <td><%= activity.entity_type || tt('admin.system') %></td>
+              <td><%= activity.details || '' %></td>
+              <td><%= activity.created_at %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
