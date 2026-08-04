@@ -1,6 +1,6 @@
 # GitHub Actions Deployment Pipeline
 
-FunctionSid uses GitHub Actions to prepare the Oracle Linux VM for deployment. The workflow does not start the website.
+FunctionSid uses GitHub Actions for production deployment to the Oracle Linux VM.
 
 ## Workflow File
 
@@ -47,16 +47,10 @@ Steps:
 4. Reset `/opt/functionsid` to `origin/main`.
 5. Run the deployment helper scripts.
 6. Install production dependencies with `npm ci --omit=dev`.
-7. Verify repository, branch, latest commit, dependencies, Node.js, PM2, Nginx, deployment scripts, and Oracle Wallet files.
+7. Verify repository, branch, latest commit, dependencies, Node.js, PM2, Nginx, deployment scripts, Oracle Wallet files, and Oracle connectivity.
+8. Reload the `functionsid` PM2 process, or start it if it is not already running.
 
-The job does not run:
-
-```bash
-pm2 start
-pm2 reload
-npm start
-systemctl restart
-```
+The job does not run `npm start`; production runtime is managed by PM2.
 
 ## Required Repository Secrets
 
@@ -72,17 +66,15 @@ systemctl restart
 - Workflow file exists.
 - Tests are configured.
 - VM preparation scripts exist.
-- Deployment still requires Oracle VM access and GitHub Secrets.
-- Production `.env` and Oracle Wallet are required before VM verification can pass.
+- Deployment requires the GitHub repository secrets listed below.
+- Production `.env` and Oracle Wallet must remain on the VM and out of Git.
+- Pushes to `main` automatically update `/opt/functionsid` and reload PM2.
 
 ## Future Deployment Steps
 
-After the VM is prepared:
+Operational checks:
 
-1. Copy the Oracle Wallet to `/opt/functionsid/wallet`.
-2. Create `/opt/functionsid/.env`.
-3. Verify Oracle connectivity on the VM.
-4. Enable the Nginx config.
-5. Start PM2 manually.
-6. Configure DNS.
-7. Configure HTTPS later.
+1. Confirm the latest workflow run is successful.
+2. Confirm `/opt/functionsid` is on `origin/main`.
+3. Confirm `pm2 status functionsid` is online.
+4. Confirm `https://functionsid.duckdns.org` loads.

@@ -36,7 +36,7 @@ This document mirrors the authoritative production environment for the FunctionS
 - npm
 - PM2
 - Nginx
-- Certbot (planned later)
+- Certbot
 - `python3-certbot-nginx`
 - DNF package manager
 
@@ -62,7 +62,7 @@ Nginx
 functionsid.duckdns.org
 ```
 
-GitHub Actions prepares `/opt/functionsid`, installs production dependencies, and verifies infrastructure. It does not start or reload the official PM2 process named `functionsid` until production `.env` and Oracle Wallet are ready.
+GitHub Actions updates `/opt/functionsid`, installs production dependencies, verifies infrastructure and Oracle connectivity, then reloads or starts the official PM2 process named `functionsid`.
 
 ---
 

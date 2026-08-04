@@ -15,7 +15,7 @@ A production-quality, accessible, and lightweight personal portfolio website bui
 - **Runtime:** Node.js 24
 - **Process Manager:** PM2 (`--max-memory-restart 200M`)
 - **Reverse Proxy:** Nginx (listening on 80/443, proxying to `localhost:3000`)
-- **HTTPS:** Planned with Let's Encrypt + Certbot after the Oracle VM, DNS, production `.env`, and Oracle Wallet are ready.
+- **HTTPS:** Let's Encrypt certificate managed by Certbot for `functionsid.duckdns.org`.
 - **Architecture:** Monolithic, server-side rendered.
 
 ### Development Environment
@@ -38,7 +38,7 @@ A production-quality, accessible, and lightweight personal portfolio website bui
 - **Note:** Application code must not depend on the domain name.
 
 ### Deployment Workflow
-GitHub Actions is the single source of deployment preparation. The current workflow tests the project, prepares `/opt/functionsid` on the Oracle Linux VM, installs production dependencies, and verifies Node.js, PM2, and Nginx. It does not start or reload the application until the production `.env` and Oracle Wallet are copied to the VM.
+GitHub Actions is the production deployment path. The workflow tests the project, updates `/opt/functionsid` on the Oracle Linux VM, installs production dependencies, verifies Node.js, PM2, Nginx, Oracle Wallet, and Oracle connectivity, then reloads the `functionsid` PM2 process.
 
 Environment-specific Oracle Wallet configuration:
 
@@ -47,9 +47,9 @@ Environment-specific Oracle Wallet configuration:
 | Windows development | Project root `.env` | `D:\project\Oracle\Wallets\SIDCORE` |
 | Oracle Linux production | `/opt/functionsid/.env` | `/opt/functionsid/wallet` |
 
-Planned full deployment path:
+Production deployment path:
 ```
-Windows 11 → Git → GitHub (FunctionSid/functionsid-portfolio on main) → GitHub Actions → Oracle Linux VM → /opt/functionsid → npm ci --omit=dev → future PM2 start/restart → Nginx → DNS/HTTPS
+Windows 11 → Git → GitHub (FunctionSid/functionsid-portfolio on main) → GitHub Actions → Oracle Linux VM → /opt/functionsid → npm ci --omit=dev → PM2 reload/start → Nginx → HTTPS
 ```
 
 ---

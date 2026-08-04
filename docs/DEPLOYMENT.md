@@ -1,19 +1,10 @@
 # Deployment Process and Infrastructure Guide
 
-This document describes the prepared deployment path for FunctionSid. The current deployment work prepares the Oracle Linux VM and GitHub Actions pipeline only. It must not start the website until the production `.env` file and Oracle Wallet are present on the VM.
+This document describes the production deployment path for FunctionSid at `https://functionsid.duckdns.org`.
 
-## Current Deployment Rule
+## Production Rule
 
-Do not run these commands during the preparation phase:
-
-```bash
-pm2 start
-pm2 reload
-npm start
-systemctl restart
-```
-
-The application should remain stopped until production secrets and wallet files are copied and verified.
+PM2 may start or reload the application only after the production `.env`, Oracle Wallet, Oracle connectivity, dependency installation, and Nginx configuration have been verified.
 
 ## Target Production Environment
 
@@ -26,9 +17,9 @@ The application should remain stopped until production secrets and wallet files 
 | Production environment file | `/opt/functionsid/.env` |
 | Runtime | Node.js 24 |
 | Dependency install | `npm ci --omit=dev` |
-| Process manager | PM2, installed but not started during preparation |
-| Reverse proxy | Nginx, installed and syntax-checked |
-| HTTPS | Not enabled during preparation |
+| Process manager | PM2 process `functionsid` |
+| Reverse proxy | Nginx proxying to `127.0.0.1:3000` |
+| HTTPS | Let's Encrypt certificate managed by Certbot |
 
 ## Deployment Pipeline
 
@@ -44,10 +35,11 @@ push to main or workflow_dispatch
   -> clone or reset /opt/functionsid to origin/main
   -> install VM packages if missing
   -> npm ci --omit=dev
-  -> verify repository, dependencies, Node.js, PM2, Nginx, and system directories
+  -> verify repository, dependencies, Node.js, PM2, Nginx, wallet, and Oracle
+  -> reload or start PM2 process functionsid
 ```
 
-The workflow intentionally does not start PM2 or reload Nginx.
+The workflow does not expose secrets; it uses GitHub repository secrets only for SSH access.
 
 ## GitHub Secrets
 
@@ -72,6 +64,7 @@ chmod +x deploy/*.sh
 ./deploy/install-vm.sh
 ./deploy/update.sh
 ./deploy/check.sh
+./deploy/reload-app.sh
 ```
 
 These scripts are idempotent and safe to rerun.
@@ -139,17 +132,17 @@ The repository includes:
 deploy/nginx/functionsid.conf.template
 ```
 
-`deploy/install-vm.sh` copies it to:
+The active production config is:
 
 ```text
-/etc/nginx/conf.d/functionsid.conf.disabled
+/etc/nginx/conf.d/functionsid.conf
 ```
 
-The `.disabled` suffix keeps the config prepared but not enabled. HTTPS is not configured during this phase.
+It proxies `functionsid.duckdns.org` to `http://127.0.0.1:3000`. Certbot manages the HTTPS server block and HTTP to HTTPS redirect.
 
-## Future PM2 Enablement
+## PM2 Management
 
-Only after `/opt/functionsid/.env` and `/opt/functionsid/wallet` are present and verified, start PM2 manually:
+Start or reload production manually only after checks pass:
 
 ```bash
 cd /opt/functionsid
@@ -157,16 +150,20 @@ pm2 start ecosystem.config.js --env production
 pm2 save
 ```
 
-Do not run this during VM preparation.
+GitHub Actions normally handles this through `deploy/reload-app.sh`.
 
-## Remaining Before First Production Deployment
+## Recovery Procedure
 
-- [ ] Configure GitHub repository secrets.
-- [ ] Run the workflow against the Oracle VM.
-- [ ] Copy Oracle Wallet to `/opt/functionsid/wallet`.
-- [ ] Create `/opt/functionsid/.env`.
-- [ ] Validate Oracle connectivity from the VM.
-- [ ] Enable Nginx configuration.
-- [ ] Start PM2 manually after secrets are ready.
-- [ ] Configure DNS.
-- [ ] Configure HTTPS later.
+```bash
+cd /opt/functionsid
+git fetch origin main
+git reset --hard origin/main
+chmod +x deploy/*.sh
+./deploy/update.sh
+./deploy/check.sh
+./deploy/reload-app.sh
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+Use `sudo certbot renew --dry-run` to verify certificate renewal.

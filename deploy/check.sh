@@ -22,6 +22,7 @@ test -x deploy/check.sh
 test -x deploy/rollback.sh
 test -x deploy/check-wallet.sh
 test -x deploy/check-oracle.sh
+test -x deploy/reload-app.sh
 
 echo "Current branch: $(git rev-parse --abbrev-ref HEAD)"
 echo "Latest commit: $(git rev-parse --short HEAD)"

@@ -71,3 +71,4 @@ jobs:
             ./deploy/install-vm.sh
             ./deploy/update.sh
             ./deploy/check.sh
+            ./deploy/reload-app.sh
