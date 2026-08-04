@@ -8,10 +8,10 @@ if ! npm list -g pm2 --depth=0 >/dev/null 2>&1; then
   exit 1
 fi
 
-if pgrep -af "[p]m2: God Daemon|[n]ode /opt/functionsid/app.js|[n]ode .* /opt/functionsid/app.js" >/dev/null 2>&1; then
-  echo "A PM2 daemon or FunctionSid Node process appears to be running. Stop it before using this deployment-preparation workflow." >&2
-  pgrep -af "[p]m2: God Daemon|[n]ode /opt/functionsid/app.js|[n]ode .* /opt/functionsid/app.js" >&2
-  exit 1
+if pgrep -af "[n]ode /opt/functionsid/app.js|[n]ode .* /opt/functionsid/app.js" >/dev/null 2>&1; then
+  echo "PM2 is installed. FunctionSid application process is already running."
+elif pgrep -af "[p]m2: God Daemon" >/dev/null 2>&1; then
+  echo "PM2 is installed. PM2 daemon is running; FunctionSid process is not currently online."
 else
-  echo "PM2 is installed. No PM2 daemon or FunctionSid Node process is running."
+  echo "PM2 is installed. No PM2 daemon is currently running."
 fi
